@@ -10,9 +10,9 @@ import {
 
 // import * as Services from './services';
 
-import Home from 'components/templates/Home';
-import Nav from 'components/organisms/Nav';
-import About from 'components/templates/About';
+import Home from './components/templates/Home';
+import Nav from './components/organisms/Nav';
+import About from './components/templates/About';
 
 require('./style.css');
 

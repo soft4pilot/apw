@@ -1,2 +1,6 @@
-.a__button {
+@import '/components/quarks.css';
+
+.Button {
+  color: var(--foreground);
+  background-color: var(--background);
 }

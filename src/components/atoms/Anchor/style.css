@@ -1,4 +1,6 @@
-.a__link {
+@import '/components/quarks.css';
+
+.Anchor {
   display: block;
   width: inherit;
   height: inherit;

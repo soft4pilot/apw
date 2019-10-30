@@ -1,15 +1,18 @@
 import React from 'react';
+import styled from 'styled-components';
 
 import Title from 'components/atoms/Title';
 import Paragraph from 'components/atoms/Paragraph';
 
-require('./style.css');
+const StyledContent = styled.div`
+  text-align: center;
+`;
 
 const Content = props => (
-  <div className="m__content">
+  <StyledContent>
     <Title text={props.title} />
     <Paragraph text={props.text} />
-  </div>
+  </StyledContent>
 );
 
 export default Content;

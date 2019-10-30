@@ -1,7 +1,0 @@
-@import 'components/quarks.css';
-
-html, body {
-  margin: 0;
-  padding: 0;
-  font-family: var(--base-font-family);
-}

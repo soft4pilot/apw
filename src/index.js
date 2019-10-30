@@ -2,19 +2,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route
-} from "react-router-dom";
+// import * as Services from './services'; <-- PENDIENTE: Agregar servicio fuera de línea (off-line)
 
-// import * as Services from './services';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-import Home from './components/templates/Home';
-import Nav from './components/organisms/Nav';
-import About from './components/templates/About';
+import Nav from 'components/organisms/Nav';
 
-require('./style.css');
+import Home from 'interfaces/Home';
+import About from 'interfaces/About';
 
 const App = () => (
   <Router>

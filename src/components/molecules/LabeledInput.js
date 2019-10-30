@@ -1,15 +1,18 @@
 import React from 'react';
+import styled from 'styled-components';
 
 import Label from 'components/atoms/Label';
 import Input from 'components/atoms/Input';
 
-require('./style.css');
+const StyledLabeledInput = styled.div`
+  margin: 0 0 10px 0;
+`;
 
 const LabeledInput = props => (
-  <div className="m__labeled_input">
+  <StyledLabeledInput>
     <Label text={props.label} />
     <Input value="" placeholder={props.placeholder} type="text" />
-  </div>
+  </StyledLabeledInput>
 );
 
 export default LabeledInput;

@@ -1,10 +1,11 @@
 // APW 1.1
-import React from 'react';
-import ReactDOM from 'react-dom';
 
 // import * as Services from './services'; <-- PENDIENTE: Agregar servicio fuera de línea (off-line)
 
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+import { Router } from "@reach/router";
 
 import Nav from 'components/organisms/Nav';
 
@@ -12,15 +13,13 @@ import Home from 'interfaces/Home';
 import About from 'interfaces/About';
 
 const App = () => (
-  <Router>
-    <div>
-      <Nav />
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route path="/about" component={About} />
-      </Switch>
-    </div>
-  </Router>
+  <div>
+    <Nav />
+    <Router>
+      <Home path="/" />
+      <About path="about" />
+    </Router>
+  </div>
 );
 
 ReactDOM.render(<App />, document.getElementById('root'));

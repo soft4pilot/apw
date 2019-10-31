@@ -1,41 +1,58 @@
 import React from 'react';
 
 import Title from 'components/atoms/Title';
-import Article from 'components/organisms/Article';
 import Form from 'components/organisms/Form';
+import ArticleList from 'components/organisms/ArticleList';
+
+// TEMPORAL
+
+const metadata = {
+  page: "APW 1.1",
+};
+
+const listItems = [
+  {
+    title: "Este es un artículo",
+    image: {src: "http://placehold.it/300x200", alt: "Texto alternativo"},
+    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id nulla cursus, hendrerit lectus id, pulvinar massa."
+  },
+  {
+    title: "Este es un artículo",
+    image: {src: "http://placehold.it/300x200", alt: "Texto alternativo"},
+    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id nulla cursus, hendrerit lectus id, pulvinar massa."
+  },
+  {
+    title: "Este es un artículo",
+    image: {src: "http://placehold.it/300x200", alt: "Texto alternativo"},
+    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id nulla cursus, hendrerit lectus id, pulvinar massa."
+  },
+  {
+    title: "Este es un artículo",
+    image: {src: "http://placehold.it/300x200", alt: "Texto alternativo"},
+    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id nulla cursus, hendrerit lectus id, pulvinar massa."
+  },
+];
+
+const formFields = [
+    {
+      label: 'Usuario',
+      placeholder: 'Nombre de usuario',
+    },
+    {
+      label: 'Contraseña',
+      placeholder: 'Contraseña de acceso',
+    },
+];
 
 const Home = props => (
   <div>
-    <Title text="APW 1.1" />
-    <Title text="Código de ejemplo" />
-    <Article
-      title="Este es un artículo"
-      image={{ src: 'http://placehold.it/300x200', alt: 'Placehold' }}
-      content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id nulla cursus,
-      hendrerit lectus id, pulvinar massa."
-    />
-    <Article
-      title="Este es otro artículo"
-      image={{ src: 'http://placehold.it/300x200', alt: 'Placehold' }}
-      content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id nulla cursus,
-      hendrerit lectus id, pulvinar massa."
-    />
+    <Title text={metadata.page} />
     <hr />
-    <Title text="Este es un formulario" />
+    <ArticleList items={listItems} />
+    <hr />
+    <Title text="Acceso administrativo" />
     <Form fields={formFields} buttonText="Submit" />
   </div>
 );
-
-// TEMPORAL
-const formFields = [
-    {
-      label: 'Input 1',
-      placeholder: 'Placeholder for Input 1',
-    },
-    {
-      label: 'Input 2',
-      placeholder: 'Placeholder for Input 2',
-    },
-];
 
 export default Home;

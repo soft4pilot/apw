@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { Link } from 'react-router-dom';
+import { Link } from "@reach/router";
 
 const StyledNav = styled.nav`
   ul {
@@ -36,7 +36,7 @@ const Nav = () => (
     <StyledNav>
       <ul>
         <li><Link to="/">Home</Link></li>
-        <li><Link to="/about">About</Link></li>
+        <li><Link to="about">About</Link></li>
       </ul>
     </StyledNav>
   );

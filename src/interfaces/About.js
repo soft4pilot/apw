@@ -2,8 +2,20 @@ import React from 'react';
 
 import Title from 'components/atoms/Title';
 
-const About = () => (
-  <Title text="Esta es la página de identidad (About)" />
-);
+class About extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      title: "Acerca de la institución"
+    };
+  }
+
+  render() {
+    return (
+      <Title text={this.state.title} />
+    );
+  }
+}
 
 export default About;

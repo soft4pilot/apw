@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Metadata from 'model/Metadata';
+
 import Title from 'components/atoms/Title';
 import Form from 'components/organisms/Form';
 import ArticleList from 'components/organisms/ArticleList';
@@ -43,6 +45,7 @@ const formFields = [
       placeholder: 'Contraseña de acceso',
     },
 ];
+
 
 const Home = props => (
   <div>

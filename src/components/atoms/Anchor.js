@@ -2,15 +2,17 @@ import React from 'react';
 import styled from 'styled-components';
 
 const StyledAnchor = styled.a`
-  display: block;
-  width: inherit;
-  height: inherit;
-  textDecoration: none;
   color: black;
+  font-family: sans-serif;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
 `;
 
 const Anchor = props => (
-  <StyledAnchor>{props.text}</StyledAnchor>
+  <StyledAnchor>{props.children}</StyledAnchor>
 );
 
 export default Anchor;

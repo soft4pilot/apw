@@ -1,18 +1,19 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Title from 'components/atoms/Title';
-import Paragraph from 'components/atoms/Paragraph';
+import Anchor from 'components/atoms/Anchor';
 
-const StyledContent = styled.div`
+const StyledMenu = styled.div`
   text-align: center;
 `;
 
-const Content = props => (
-  <StyledContent>
-    <Title text={props.title} />
-    <Paragraph text={props.text} />
-  </StyledContent>
+const Menu = props => (
+  <StyledMenu>
+    { props.items.map((item, i) => (
+        <Anchor id={i}>{item}</Anchor>
+      ))
+    }
+  </StyledMenu>
 );
 
-export default Content;
+export default Menu;

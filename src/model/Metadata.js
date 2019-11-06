@@ -5,26 +5,41 @@
  * @Date:   2019-11-05
  */
 
+class Metadata {
 
+  title = 'APW 1.1';
+  slogan = 'Una arquitectura para productos Web';
 
-export default class Metadata {
-
-  const title = 'APW 1.1';
-  const slogan = 'Una arquitectura para productos Web';
-
-  const identity = {
+  identity = {
     name: 'Empresa',
     logo: 'http://placehold.it/100x100'
   };
 
-  const contact = {
+  contact = {
     email: 'info@empresa.com.mx'
   };
 
-  let subjects [
-    {tile: '', summary: ''},
-    {tile: '', summary: ''},
-    {tile: '', summary: ''}
+  subjects = [
+    {
+      title: "Este es un artículo",
+      image: {src: "http://placehold.it/300x200", alt: "Texto alternativo"},
+      summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id nulla cursus, hendrerit lectus id, pulvinar massa."
+    },
+    {
+      title: "Este es un artículo",
+      image: {src: "http://placehold.it/300x200", alt: "Texto alternativo"},
+      summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id nulla cursus, hendrerit lectus id, pulvinar massa."
+    },
+    {
+      title: "Este es un artículo",
+      image: {src: "http://placehold.it/300x200", alt: "Texto alternativo"},
+      summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id nulla cursus, hendrerit lectus id, pulvinar massa."
+    },
+    {
+      title: "Este es un artículo",
+      image: {src: "http://placehold.it/300x200", alt: "Texto alternativo"},
+      summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id nulla cursus, hendrerit lectus id, pulvinar massa."
+    },
   ];
 
 }

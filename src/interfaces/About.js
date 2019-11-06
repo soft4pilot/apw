@@ -2,20 +2,11 @@ import React from 'react';
 
 import Title from 'components/atoms/Title';
 
-class About extends React.Component {
-
-  constructor(props) {
-    super(props);
-    this.state = {
-      title: "Acerca de la institución"
-    };
-  }
-
-  render() {
-    return (
-      <Title text={this.state.title} />
-    );
-  }
-}
+const About = props => (
+  <div>
+    <Title text='Acerca de la institución' />
+    <hr />
+  </div>
+);
 
 export default About;

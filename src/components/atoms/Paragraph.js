@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const StyledParagraph = styled.p`
-  padding: 0 20px;
+  padding: 5px 20px;
 `;
 
 const Paragraph = props => (

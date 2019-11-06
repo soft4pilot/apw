@@ -4,19 +4,20 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-
 import { Router } from "@reach/router";
 
-import Nav from 'components/organisms/Nav';
+import Metadata from 'model/Metadata';
+
+import Navigation from 'components/organisms/Navigation';
 
 import Home from 'interfaces/Home';
 import About from 'interfaces/About';
 
 const App = () => (
   <div>
-    <Nav />
+    <Navigation />
     <Router>
-      <Home path="/" />
+      <Home path="/" metadata={ Metadata } />
       <About path="about" />
     </Router>
   </div>

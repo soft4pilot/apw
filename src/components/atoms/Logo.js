@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import logo from 'assets/logo.svg'
 
 const StyledImage = styled.img`
-  height: 100px;
+  height: 200px;
 `;
 
 const Image = props => (

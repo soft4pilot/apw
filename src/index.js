@@ -9,6 +9,8 @@ import { Router } from "@reach/router";
 import Metadata from 'model/Metadata';
 
 import Navigation from 'components/organisms/Navigation';
+import Header from 'components/organisms/Header';
+import Footer from 'components/organisms/Footer';
 
 import Home from 'interfaces/Home';
 import About from 'interfaces/About';
@@ -16,10 +18,14 @@ import About from 'interfaces/About';
 const App = () => (
   <div>
     <Navigation />
+    <Header />
     <Router>
       <Home path="/" metadata={ Metadata } />
       <About path="about" />
     </Router>
+    <Footer>
+      Pie de página
+    </Footer>
   </div>
 );
 

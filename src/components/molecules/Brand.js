@@ -4,15 +4,19 @@ import styled from 'styled-components';
 import Logo from 'components/atoms/Logo';
 import Label from 'components/atoms/Label';
 
-const Container = styled.div`
-  
+const BrandLogo = styled(Logo)`
+  float: left;
+`;
+
+const BrandLabel = styled(Label)`
+  float: left;
 `;
 
 const Brand = props => (
-  <Container>
-    <Logo />
-    <Label>Empresa</Label>
-  </Container>
+  <div>
+    <BrandLogo />
+    <BrandLabel>Empresa</BrandLabel>
+  </div>
 );
 
 export default Brand;

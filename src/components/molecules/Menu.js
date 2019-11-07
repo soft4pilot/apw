@@ -3,14 +3,19 @@ import styled from 'styled-components';
 
 import Anchor from 'components/atoms/Anchor';
 
-const StyledMenu = styled.div`
-  text-align: center;
+const StyledMenu = styled.ul`
+  li {
+    display: inline;
+    padding: 0 3px;
+  }
 `;
 
 const Menu = props => (
   <StyledMenu>
     { props.items.map((item, i) => (
-        <Anchor id={i}>{item}</Anchor>
+        <li>
+          <Anchor key={i}>{item}</Anchor>
+        </li>
       ))
     }
   </StyledMenu>

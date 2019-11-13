@@ -6,21 +6,19 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router } from "@reach/router";
 
-import Metadata from 'model/Metadata';
-
 import Navigation from 'components/organisms/Navigation';
 import Header from 'components/organisms/Header';
 import Footer from 'components/organisms/Footer';
 
-import Home from 'interfaces/Home';
-import About from 'interfaces/About';
+import Home from 'containers/Home';
+import About from 'containers/About';
 
 const App = () => (
   <div>
     <Navigation />
     <Header />
     <Router>
-      <Home path="/" metadata={ Metadata } />
+      <Home path="/" />
       <About path="about" />
     </Router>
     <Footer>

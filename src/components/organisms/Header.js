@@ -6,8 +6,6 @@ const StyledHeader = styled.header`
 
 `;
 
-const items = ['Uno', 'Dos', 'Tres'];
-
 const Header = props => (
   <StyledHeader>
     { props.children }

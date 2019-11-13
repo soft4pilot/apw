@@ -11,10 +11,11 @@ const StyledMenu = styled.ul`
 `;
 
 const Menu = props => (
+
   <StyledMenu>
     { props.items.map((item, i) => (
-        <li>
-          <Anchor key={i}>{item}</Anchor>
+        <li key={i}>
+          <Anchor>{item}</Anchor>
         </li>
       ))
     }

@@ -11,8 +11,6 @@ const StyledFooter = styled.footer`
   text-align: center;
 `;
 
-const items = ['Uno', 'Dos', 'Tres'];
-
 const Footer = props => (
   <StyledFooter>
     { props.children }

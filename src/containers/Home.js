@@ -1,10 +1,7 @@
 
 
-import React, { useState, useEffect } from 'react';
-
-//import axios from 'axios';
-
-import { useFetch } from '../services/fetch';
+import React from 'react';
+import useData from 'access';
 
 import Title from 'components/atoms/Title';
 
@@ -14,27 +11,8 @@ import Title from 'components/atoms/Title';
 
 function Home() {
 
-  //const [product, setProduct] = useState({});
-
-  // useEffect(() => {
-  //
-  //   const getProduct = async () => {
-  //
-  //     const result = await axios(
-  //       'https://my-json-server.typicode.com/josesteva/apw-data/product',
-  //     );
-  //
-  //     setProduct(result.data);
-  //
-  //   };
-  //
-  //   getProduct();
-  //
-  // }, []);
-
-  const api = useFetch('https://my-json-server.typicode.com/josesteva/apw-data/product', {});
-
-  const product = api.response;
+  // Obener los datos del recurso producto
+  const product = useData('product', {});
 
   return (
     <div>
@@ -42,6 +20,7 @@ function Home() {
       <hr />
     </div>
   );
+
 }
 
 export default Home;

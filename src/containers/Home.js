@@ -1,24 +1,20 @@
 
 
 import React from 'react';
-import useData from 'access';
-import useResource from 'services';
+import useResource from 'resources';
 
 import Title from 'components/atoms/Title';
-
-// Utilizar: const Home = props => {
-// ...
-// );
 
 const Home = () => {
 
   // Obener los datos del recurso producto
-  const product = useData('product', {});
+  const [product, actions] = useResource('product', {});
 
   return (
     <div>
       <h1></h1>
       <Title text={product.name} />
+      <button onClick={() => actions.updateResource}>Actualizar</button>
       <hr />
     </div>
   );

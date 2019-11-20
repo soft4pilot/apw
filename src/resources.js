@@ -3,67 +3,29 @@ import { useState, useEffect, useReducer } from "react";
 
 import axios from "axios";
 
-// NOTA: Obtener estos datos de un archivo de configuración...
-// const call = axios.create({
-//
-//   baseURL: 'https://my-json-server.typicode.com/josesteva/apw-data/'
-//
-// });
+const api = axios.create({
+
+  baseURL: 'https://my-json-server.typicode.com/josesteva/apw-data/'
+
+});
 
 const useResource = (resource, defaultValue) => {
-
-  // URL para acceder a la API
-  const baseURL = 'https://my-json-server.typicode.com/josesteva/apw-data/';
 
   // Datos utilizados por el componente
   const [data, setData] = useState(defaultValue);
 
+  // Bandera para volver a obtener el recurso
+  const [updated, setUpdated] = useState(false);
+
   // Al montar el componente
-  useEffect(() => {
-
-    readResource();
-
-  }, []);
-
-  // Crear recurso
-  const createResource = async (data) => {
+  useEffect(async () => {
 
     try {
-
-      const url = `${baseURL}${resource}`;
-
-      // Enviar solicitud POST a la API...
-      const response = await axios({
-        method: "POST",
-        url: url,
-        data: data
-      });
-
-      // Si puede crearse el recurso, recargarlo...
-      if (response.status === 200) {
-        console.log("Se creó un recurso");
-        readResource();
-      }
-
-    } catch (error) {
-
-      throw error;
-
-    }
-
-  };
-
-  // Obtener recursos
-  const readResource = async (id) => {
-
-    try {
-
-      const url = `${baseURL}${resource}${id ? `/${id}` : ""}`;
 
       // Enviar solicitud GET a la API...
-      const response = await axios({
+      const response = await api({
           method: "GET",
-          url: url
+          url: resource
         });
 
       // Si puede obtenerse el recurso, cargarlo...
@@ -76,28 +38,63 @@ const useResource = (resource, defaultValue) => {
 
       throw error;
 
+    } finally {
+
+      setUpdated(false);
+
+    }
+
+  }, [updated]);
+
+  // Cargar recurso
+  const read = () => {
+
+    setUpdated(true);
+
+  };
+
+  // Crear un recurso nuevo
+  const create = async (data) => {
+
+    try {
+
+      // Enviar solicitud POST a la API...
+      const response = await api({
+        method: "POST",
+        url: resource,
+        data: data
+      });
+
+      // Si puede crearse el recurso, recargarlo...
+      if (response.status === 201) {
+        console.log("Se creó un recurso");
+        setUpdated(true);
+      }
+
+    } catch (error) {
+
+      throw error;
+
     }
 
   };
 
-  // Actualizar recurso
-  const updateResource = async (id, data) => {
+  // Actualizar un recurso
+  const update = async (data, id) => {
 
     try {
 
-      const url = `${baseURL}${resource}/${id}`;
-
       // Enviar solicitud PUT a la API...
-      const response = await axios({
+      const response = await api({
         method: "PUT",
-        url: url,
+        url: `${resource}/${id}`,
         data: data
       });
 
       // Si puede actualizarse el recurso, recargarlo...
       if (response.status === 200) {
         console.log("Se actualizó un recurso");
-        readResource();
+        setUpdated(true);
       }
 
     } catch (error) {
@@ -108,23 +105,21 @@ const useResource = (resource, defaultValue) => {
 
   };
 
-  // Eliminar recurso
-  const deleteResource = async (id) => {
+  // Eliminar un recurso
+  const remove = async (id) => {
 
     try {
 
-      const url = `${baseURL}${resource}/${id}`;
-
       // Enviar solicitud PUT a la API...
-      const response = await axios({
+      const response = await api({
         method: "DELETE",
-        url: url
+        url: `${resource}/${id}`,
       });
 
       // Si puede actualizarse el recurso, recargarlo...
       if (response.status === 200) {
-        console.log("Se eliminó un recurso");
-        readResource();
+        console.log("Se borró un recurso");
+        setUpdated(true);
       }
 
     } catch (error) {
@@ -135,7 +130,7 @@ const useResource = (resource, defaultValue) => {
 
   };
 
-  return [data, {createResource, readResource, updateResource, deleteResource}];
+  return {data, read, create, update, remove};
 
 };
 

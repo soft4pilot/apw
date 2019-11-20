@@ -8,13 +8,15 @@ import Title from 'components/atoms/Title';
 const Home = () => {
 
   // Obener los datos del recurso producto
-  const [product, actions] = useResource('product', {});
+  const product = useResource('product', {});
 
   return (
     <div>
       <h1></h1>
-      <Title text={product.name} />
-      <button onClick={() => actions.updateResource}>Actualizar</button>
+      <Title text={product.data.name} />
+      <button onClick={() => product.create}>Crear</button>
+      <button onClick={() => product.update}>Actualizar</button>
+      <button onClick={() => product.remove}>Borrar</button>
       <hr />
     </div>
   );

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Anchor from 'components/atoms/Anchor';
+import Link from '../atoms/Link';
 
 const StyledMenu = styled.ul`
   li {
@@ -15,7 +15,7 @@ const Menu = props => (
   <StyledMenu>
     { props.items.map((item, i) => (
         <li key={i}>
-          <Anchor>{item}</Anchor>
+          <Link>{item}</Link>
         </li>
       ))
     }

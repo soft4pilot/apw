@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Brand from 'components/molecules/Brand';
-import Menu from 'components/molecules/Menu';
+import Brand from '../molecules/Brand';
+import Menu from '../molecules/Menu';
 
 const Container = styled.div`
 

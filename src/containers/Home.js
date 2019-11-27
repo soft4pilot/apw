@@ -1,9 +1,10 @@
 
 
 import React from 'react';
-import useResource from 'resources';
+import useResource from '../resources';
 
-import Title from 'components/atoms/Title';
+import Title from '../components/atoms/Title';
+import Button from '../components/atoms/Button.js';
 
 const Home = () => {
 
@@ -17,12 +18,11 @@ const Home = () => {
 
   return (
     <div>
-      <h1></h1>
       <Title text={product.data.name} />
       <h2>{product.data.version}</h2>
-      <button onClick={createProduct}>Crear</button>
-      <button onClick={updateProduct}>Actualizar</button>
-      <button onClick={removeProduct}>Borrar</button>
+      <Button onClick={createProduct}>Crear</Button>
+      <Button onClick={updateProduct}>Actualizar</Button>
+      <Button onClick={removeProduct}>Borrar</Button>
       <hr />
     </div>
   );

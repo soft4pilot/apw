@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Logo from 'components/atoms/Logo';
-import Label from 'components/atoms/Label';
+import Logo from '../atoms/Logo';
+import Label from '../atoms/Label';
 
 const BrandLogo = styled(Logo)`
   float: left;

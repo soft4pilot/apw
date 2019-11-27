@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Title from 'components/atoms/Title';
+import Title from '../components/atoms/Title';
 
 const About = props => (
   <div>

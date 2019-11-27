@@ -1,11 +1,11 @@
 
-import { useState, useEffect, useReducer } from "react";
+import { useState, useEffect } from "react";
 
 import axios from "axios";
 
 const api = axios.create({
 
-  baseURL: 'https://my-json-server.typicode.com/josesteva/apw-data/'
+  baseURL: 'http://localhost:4000/'
 
 });
 
@@ -18,32 +18,40 @@ const useResource = (resource, defaultValue) => {
   const [updated, setUpdated] = useState(false);
 
   // Al montar el componente
-  useEffect(async () => {
+  useEffect( () => {
 
-    try {
+    const getData = async () => {
 
-      // Enviar solicitud GET a la API...
-      const response = await api({
-          method: "GET",
-          url: resource
-        });
+      try {
 
-      // Si puede obtenerse el recurso, cargarlo...
-      if (response.status === 200) {
-        console.log("Se obtuvo un recurso");
-        setData(response.data);
+        // Enviar solicitud GET a la API...
+        const response = await api({
+            method: "GET",
+            url: resource
+          });
+
+        // Si puede obtenerse el recurso, cargarlo...
+        if (response.status === 200) {
+          console.log("Se obtuvo un recurso");
+          setData(response.data);
+        }
+
+      } catch (error) {
+
+        throw error;
+
+      } finally {
+
+        setUpdated(false);
+
       }
-
-    } catch (error) {
-
-      throw error;
-
-    } finally {
-
-      setUpdated(false);
 
     }
 
+    getData();
+
+  // NOTA: Deshabilité temporalmente una advertencia (warning) pero es importante estudiar con cuidado el problema después.
+  // eslint-disable-next-line
   }, [updated]);
 
   // Cargar recurso

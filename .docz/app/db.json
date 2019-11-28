@@ -1,0 +1,195 @@
+{
+  "config": {
+    "title": "Apw",
+    "description": "My awesome app using docz",
+    "menu": [],
+    "version": "0.1.0",
+    "repository": null,
+    "native": false,
+    "codeSandbox": true,
+    "themeConfig": {},
+    "separator": "-"
+  },
+  "props": [
+    {
+      "key": "src/containers/About.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "About",
+          "methods": [],
+          "actualName": "About"
+        }
+      ]
+    },
+    {
+      "key": "src/containers/Home.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Home",
+          "methods": [],
+          "actualName": "Home"
+        }
+      ]
+    },
+    {
+      "key": "src/components/atoms/Button.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Button",
+          "methods": [],
+          "actualName": "Button"
+        }
+      ]
+    },
+    {
+      "key": "src/components/atoms/Image.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Image",
+          "methods": [],
+          "actualName": "Image"
+        }
+      ]
+    },
+    {
+      "key": "src/components/atoms/Input.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Input",
+          "methods": [],
+          "actualName": "Input"
+        }
+      ]
+    },
+    {
+      "key": "src/components/atoms/Label.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Label",
+          "methods": [],
+          "actualName": "Label"
+        }
+      ]
+    },
+    {
+      "key": "src/components/atoms/Link.js",
+      "value": [
+        {
+          "description": "Enlace a otra página\n@param {string} somebody\n@example\n´´´\n<Link level=\"1\" />",
+          "displayName": "Link",
+          "methods": [],
+          "actualName": "Link"
+        }
+      ]
+    },
+    {
+      "key": "src/components/atoms/Logo.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Image",
+          "methods": [],
+          "actualName": "Image"
+        }
+      ]
+    },
+    {
+      "key": "src/components/atoms/Paragraph.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Paragraph",
+          "methods": [],
+          "actualName": "Paragraph"
+        }
+      ]
+    },
+    {
+      "key": "src/components/atoms/Title.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Title",
+          "methods": [],
+          "actualName": "Title"
+        }
+      ]
+    },
+    {
+      "key": "src/components/molecules/Brand.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Brand",
+          "methods": [],
+          "actualName": "Brand"
+        }
+      ]
+    },
+    {
+      "key": "src/components/molecules/Menu.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Menu",
+          "methods": [],
+          "actualName": "Menu"
+        }
+      ]
+    },
+    {
+      "key": "src/components/organisms/Footer.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Footer",
+          "methods": [],
+          "actualName": "Footer"
+        }
+      ]
+    },
+    {
+      "key": "src/components/organisms/Header.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Header",
+          "methods": [],
+          "actualName": "Header"
+        }
+      ]
+    },
+    {
+      "key": "src/components/organisms/Navigation.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Navigation",
+          "methods": [],
+          "actualName": "Navigation"
+        }
+      ]
+    }
+  ],
+  "entries": [
+    {
+      "key": "src/components/atoms/Button.mdx",
+      "value": {
+        "id": "2a71a7fee96bea5f18c4036e265f9f4e",
+        "filepath": "src/components/atoms/Button.mdx",
+        "link": "",
+        "slug": "src-components-atoms-button",
+        "route": "/src-components-atoms-button",
+        "name": "Button",
+        "menu": "",
+        "headings": []
+      }
+    }
+  ]
+}

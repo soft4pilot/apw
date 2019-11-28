@@ -1,14 +1,20 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const StyledHeader = styled.header`
-  background-color: #efefef;
+import Brand from '../../components/molecules/Brand';
+import Menu from '../../components/molecules/Menu';
 
+const StyledHeader = styled.header`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #efefef;
 `;
 
 const Header = props => (
   <StyledHeader>
-    { props.children }
+    <Brand />
+    <Menu />
   </StyledHeader>
 );
 

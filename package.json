@@ -12,10 +12,12 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "start:dev": "react-scripts start & json-server --port 4000 --watch api/test.json",
+    "start:api": "json-server --port 4000 --watch api/test.json",
+    "start:guide": "styleguidist server",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "api": "json-server --port 4000 --watch api/test.json"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"

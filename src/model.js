@@ -9,10 +9,10 @@ const api = axios.create({
 
 });
 
-const useResource = (resource, defaultValue) => {
+const useModel = (resource, value) => {
 
   // Datos utilizados por el componente
-  const [data, setData] = useState(defaultValue);
+  const [data, setData] = useState(value);
 
   // Bandera para volver a obtener el recurso
   const [updated, setUpdated] = useState(false);
@@ -142,4 +142,4 @@ const useResource = (resource, defaultValue) => {
 
 };
 
-export default useResource;
+export default useModel;

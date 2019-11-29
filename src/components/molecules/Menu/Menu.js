@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Link from '../atoms/Link';
+import Link from '../../atoms/Link';
 
-const Container = styled.ul`
+const Ul = styled.ul`
   li {
     display: inline;
     padding: 0 3px;
@@ -12,14 +12,14 @@ const Container = styled.ul`
 
 const Menu = props => (
 
-  <Container>
+  <Ul>
     { props.items.map((item, i) => (
         <li key={i}>
           <Link>{item}</Link>
         </li>
       ))
     }
-  </Container>
+  </Ul>
 );
 
 export default Menu;

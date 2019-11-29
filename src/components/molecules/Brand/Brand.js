@@ -1,21 +1,19 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Logo from '../atoms/Logo';
-import Label from '../atoms/Label';
+import Logo from '../../atoms/Logo';
+import Label from '../../atoms/Label';
 
-const BrandLogo = styled(Logo)`
-  float: left;
-`;
-
-const BrandLabel = styled(Label)`
-  float: left;
+const Container = styled.div`
+  display: flex;
+  align-content: flex-start;
+  flex-wrap: nowrap;
 `;
 
 const Brand = props => (
   <div>
-    <BrandLogo />
-    <BrandLabel>Empresa</BrandLabel>
+    <Logo />
+    <Label>Empresa</Label>
   </div>
 );
 

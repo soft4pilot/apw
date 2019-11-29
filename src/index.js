@@ -6,17 +6,17 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router } from "@reach/router";
 
-import Home from './containers/Home';
-import About from './containers/About';
-
 import Header from './components/organisms/Header';
+
+import Home from './interfaces/Home';
+import Page from './interfaces/Page';
 
 const App = () => (
   <div>
     <Header />
     <Router>
       <Home path="/" />
-      <About path="about" />
+      <Page path="about" />
     </Router>
   </div>
 );

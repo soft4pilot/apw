@@ -23,8 +23,8 @@
     },
     {
       "name": "Página interna",
-      "nickname": "subject",
-      "path": "/subject"
+      "nickname": "page",
+      "path": "/page"
     }
   ],
   "session": {

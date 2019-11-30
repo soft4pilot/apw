@@ -16,7 +16,7 @@ const App = () => (
     <Header />
     <Router>
       <Home path="/" />
-      <Page path="about" />
+      <Page path="/page" />
     </Router>
   </div>
 );

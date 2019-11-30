@@ -3,13 +3,14 @@ import { useState, useEffect } from "react";
 
 import axios from "axios";
 
-const api = axios.create({
-
-  baseURL: 'http://localhost:4000/'
-
-});
-
 const useModel = (resource, value) => {
+
+  // ...
+  const api = axios.create({
+
+    baseURL: 'http://localhost:4000/'
+
+  });
 
   // Datos utilizados por el componente
   const [data, setData] = useState(value);

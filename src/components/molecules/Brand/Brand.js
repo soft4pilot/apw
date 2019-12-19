@@ -13,7 +13,7 @@ const Container = styled.div`
 const Brand = props => (
   <div>
     <Logo />
-    <Label>Empresa</Label>
+    <Label>{props.name}</Label>
   </div>
 );
 

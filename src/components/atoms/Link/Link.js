@@ -1,7 +1,7 @@
 import React from 'react';
-import styled from 'styled-components';
+import Styled from 'styled-components';
 
-const StyledLink = styled.a`
+const StyledLink = Styled.a`
   color: black;
   font-family: sans-serif;
   text-decoration: none;

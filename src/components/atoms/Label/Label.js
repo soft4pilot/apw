@@ -1,7 +1,7 @@
 import React from 'react';
-import styled from 'styled-components';
+import Styled from 'styled-components';
 
-const StyledLabel = styled.span`
+const StyledLabel = Styled.span`
   font-family: sans-serif;
   font-size: 1em;
 `;

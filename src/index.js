@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import App from './resources/App';
+import App from './App';
 
-//import * as serviceWorker from './serviceWorker';
+//import * as Cache from './cache';
 
 ReactDOM.render(<App />, document.getElementById('root'));
 

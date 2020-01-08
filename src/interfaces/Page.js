@@ -1,5 +1,4 @@
 import React from 'react';
-import useModel from '../model';
 
 const Page = () => {
 

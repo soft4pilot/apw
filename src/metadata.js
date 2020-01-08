@@ -2,10 +2,10 @@ import React from 'react';
 
 export const initialState = {
   company: {
-    name: 'Soft4pilot',
-    slogan: 'Conocimiento, información y datos para pilotos',
+    name: 'Empresa',
+    slogan: 'Lema de la empresa',
     logo: 'http://placehold.it/100x100',
-    email: 'info@soft4pilot.com.mx'
+    email: 'info@empresa.com.mx'
   },
   service: {
     name: 'APW',

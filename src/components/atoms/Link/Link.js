@@ -2,13 +2,14 @@ import React from 'react';
 import Styled from 'styled-components';
 
 const StyledLink = Styled.a`
-  color: black;
+  color: blue;
   font-family: sans-serif;
   text-decoration: none;
   &:hover {
     text-decoration: underline;
     cursor: pointer;
   }
+
 `;
 
 /**

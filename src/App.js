@@ -2,14 +2,14 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-import State, { initialState } from './state';
+import State, { initialState } from './metadata';
 
 // Componentes utilizados
 import Header from './components/organisms/Header';
 
 // Recursos que proporciona el servicio
-import Home from './resources/Home';
-import Page from './resources/Page';
+import Home from './interfaces/Home';
+import Page from './interfaces/Page';
 
 const App = () => {
 

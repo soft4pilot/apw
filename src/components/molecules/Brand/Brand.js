@@ -2,19 +2,22 @@ import React from 'react';
 import Styled from 'styled-components';
 
 import Logo from '../../atoms/Logo';
-import Label from '../../atoms/Label';
+import Title from '../../atoms/Title';
 
 const Container = Styled.div`
-  display: flex;
-  align-content: flex-start;
-  flex-wrap: nowrap;
+  display: inline-block;
+  line-height: 120px;
+  height: 120px;
+  .left {
+    float: left;
+  }
 `;
 
 const Brand = props => (
-  <div>
-    <Logo />
-    <Label>{props.name}</Label>
-  </div>
+  <Container>
+    <Logo class="left" />
+    <Title>{props.name}</Title>
+  </Container>
 );
 
 export default Brand;

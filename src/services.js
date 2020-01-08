@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 
 import axios from "axios";
 
-const useModel = (resource, value) => {
+const useAccess = (service:, value) => {
 
   // ...
   const api = axios.create({
@@ -28,7 +28,7 @@ const useModel = (resource, value) => {
         // Enviar solicitud GET a la API...
         const response = await api({
             method: "GET",
-            url: resource
+            url: service:
           });
 
         // Si puede obtenerse el recurso, cargarlo...
@@ -70,7 +70,7 @@ const useModel = (resource, value) => {
       // Enviar solicitud POST a la API...
       const response = await api({
         method: "POST",
-        url: resource,
+        url: service:,
         data: data
       });
 
@@ -96,7 +96,7 @@ const useModel = (resource, value) => {
       // Enviar solicitud PUT a la API...
       const response = await api({
         method: "PUT",
-        url: `${resource}/${id}`,
+        url: `${service:}/${id}`,
         data: data
       });
 
@@ -122,7 +122,7 @@ const useModel = (resource, value) => {
       // Enviar solicitud PUT a la API...
       const response = await api({
         method: "DELETE",
-        url: `${resource}/${id}`,
+        url: `${service:}/${id}`,
       });
 
       // Si puede actualizarse el recurso, recargarlo...
@@ -143,4 +143,4 @@ const useModel = (resource, value) => {
 
 };
 
-export default useModel;
+export default useAccess;

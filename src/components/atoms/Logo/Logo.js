@@ -1,14 +1,13 @@
 import React from 'react';
 import Styled from 'styled-components';
 
-import logo from '../../../assets/logo.svg'
-
 const StyledImage = Styled.img`
-  height: 200px;
+  height: 120px;
+  float: left;
 `;
 
-const Image = props => (
-  <StyledImage src={logo} />
+const Logo = props => (
+  <StyledImage src='https://via.placeholder.com/120' />
 );
 
-export default Image;
+export default Logo;

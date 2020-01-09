@@ -1,146 +1,73 @@
-
-import { useState, useEffect } from "react";
+// APW 1.1
+// Acceso a los servicios
 
 import axios from "axios";
 
-const useAccess = (service:, value) => {
+const useService = (resource) => {
 
-  // ...
-  const api = axios.create({
+  // Configuración del llamado al servicio
+  const request = axios.create({
 
-    baseURL: 'http://localhost:4000'
+    baseURL: 'https://jsonplaceholder.typicode.com'
 
   });
 
-  // Datos utilizados por el componente
-  const [data, setData] = useState(value);
+  // LLamado al servicio
+  const doRequest = async (url, method, data) => {
 
-  // Bandera para volver a obtener el recurso
-  const [updated, setUpdated] = useState(false);
+    try {
 
-  // Al montar el componente
-  useEffect( () => {
+      // Enviar solicitud HTTP a la API...
+      const response = await request({
 
-    const getData = async () => {
+          url: url,
+          method: method,
+          data: data ? data : undefined
 
-      try {
+      });
 
-        // Enviar solicitud GET a la API...
-        const response = await api({
-            method: "GET",
-            url: service:
-          });
+      // Regresar la respuesta HTTP recibida
+      return response;
 
-        // Si puede obtenerse el recurso, cargarlo...
-        if (response.status === 200) {
-          console.log("Se obtuvo un recurso");
-          setData(response.data);
-        }
+    } catch (error) {
 
-      } catch (error) {
-
-        throw error;
-
-      } finally {
-
-        setUpdated(false);
-
-      }
+      // Desplegar el error en la consola
+      console.log(error);
 
     }
 
-    getData();
-
-  // NOTA: Deshabilité temporalmente una advertencia (warning) pero es importante estudiar con cuidado el problema después.
-  // eslint-disable-next-line
-  }, [updated]);
+  }
 
   // Cargar recurso
-  const read = () => {
+  const read = async () => {
 
-    setUpdated(true);
+    return await doRequest(resource, 'GET');
 
   };
 
   // Crear un recurso nuevo
   const create = async (data) => {
 
-    try {
-
-      // Enviar solicitud POST a la API...
-      const response = await api({
-        method: "POST",
-        url: service:,
-        data: data
-      });
-
-      // Si puede crearse el recurso, recargarlo...
-      if (response.status === 201) {
-        console.log("Se creó un recurso");
-        setUpdated(true);
-      }
-
-    } catch (error) {
-
-      throw error;
-
-    }
+    return await doRequest(resource, 'POST', data);
 
   };
 
   // Actualizar un recurso
-  const update = async (data, id) => {
+  const update = async (id, data) => {
 
-    try {
-
-      // Enviar solicitud PUT a la API...
-      const response = await api({
-        method: "PUT",
-        url: `${service:}/${id}`,
-        data: data
-      });
-
-      // Si puede actualizarse el recurso, recargarlo...
-      if (response.status === 200) {
-        console.log("Se actualizó un recurso");
-        setUpdated(true);
-      }
-
-    } catch (error) {
-
-      throw error;
-
-    }
+    return await doRequest(`${resource}/${id}`, 'PUT', data);
 
   };
 
   // Eliminar un recurso
   const remove = async (id) => {
 
-    try {
-
-      // Enviar solicitud PUT a la API...
-      const response = await api({
-        method: "DELETE",
-        url: `${service:}/${id}`,
-      });
-
-      // Si puede actualizarse el recurso, recargarlo...
-      if (response.status === 200) {
-        console.log("Se borró un recurso");
-        setUpdated(true);
-      }
-
-    } catch (error) {
-
-      throw error;
-
-    }
+    return await doRequest(`${resource}/${id}`, 'DELETE');
 
   };
 
-  return {data, read, create, update, remove};
+  return {read, create, update, remove};
 
 };
 
-export default useAccess;
+export default useService;

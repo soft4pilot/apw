@@ -1,3 +1,6 @@
+// APW 1.1
+// Aplcación principal
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 

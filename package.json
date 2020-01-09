@@ -12,7 +12,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "start:dev": "react-scripts start & json-server --port 4000 --watch services/db.json",
+    "start:dev": "react-scripts start & json-server --port 4000 --watch api/db.json",
     "start:api": "json-server --port 4000 --watch api/db.json",
     "start:guide": "styleguidist server",
     "build": "react-scripts build",

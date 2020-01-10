@@ -17,7 +17,6 @@ const Page = () => {
   const delUser = (id) => {
 
     users.remove(id);
-    users.read();
 
   }
 

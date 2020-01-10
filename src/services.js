@@ -54,7 +54,7 @@ const useService = (resource) => {
 
     const response = await doRequest(resource, 'GET');
 
-    //if (response.status === 200) 
+    //if (response.status === 200)
     setData(response.data);
 
   };
@@ -64,6 +64,8 @@ const useService = (resource) => {
 
     const response = await doRequest(resource, 'POST', data);
 
+    await read();
+
   };
 
   // Actualizar un recurso
@@ -71,12 +73,16 @@ const useService = (resource) => {
 
     const response = await doRequest(`${resource}/${id}`, 'PUT', data);
 
+    await read();
+
   };
 
   // Eliminar un recurso
   const remove = async (id) => {
 
     const response = await doRequest(`${resource}/${id}`, 'DELETE');
+
+    await read();
 
   };
 

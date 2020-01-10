@@ -1,14 +1,25 @@
 // APW 1.1
 // Acceso a los servicios
 
+import { useState } from 'react';
+
 import axios from "axios";
 
+
+// Definición del Hook
 const useService = (resource) => {
+
+  // Buffer para mantener los datos del recurso
+  const [data, setData] = useState([]);
+  // Se puede incluir también espacio para otros datos: status, header, etc.
 
   // Configuración del llamado al servicio
   const request = axios.create({
 
-    baseURL: 'https://jsonplaceholder.typicode.com'
+    //baseURL: 'https://jsonplaceholder.typicode.com'
+    baseURL: 'http://localhost:4000'
+
+    // Aquí se puede agregar seguridad, formatos aceptados, etc.
 
   });
 
@@ -41,32 +52,35 @@ const useService = (resource) => {
   // Cargar recurso
   const read = async () => {
 
-    return await doRequest(resource, 'GET');
+    const response = await doRequest(resource, 'GET');
+
+    //if (response.status === 200) 
+    setData(response.data);
 
   };
 
   // Crear un recurso nuevo
   const create = async (data) => {
 
-    return await doRequest(resource, 'POST', data);
+    const response = await doRequest(resource, 'POST', data);
 
   };
 
   // Actualizar un recurso
   const update = async (id, data) => {
 
-    return await doRequest(`${resource}/${id}`, 'PUT', data);
+    const response = await doRequest(`${resource}/${id}`, 'PUT', data);
 
   };
 
   // Eliminar un recurso
   const remove = async (id) => {
 
-    return await doRequest(`${resource}/${id}`, 'DELETE');
+    const response = await doRequest(`${resource}/${id}`, 'DELETE');
 
   };
 
-  return {read, create, update, remove};
+  return {data, read, create, update, remove};
 
 };
 

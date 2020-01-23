@@ -1,9 +1,12 @@
+/**
+ * Enlace a otra página
+ */
+
 import React from 'react';
 import Styled from 'styled-components';
 
 const StyledLink = Styled.a`
   color: blue;
-  font-family: sans-serif;
   text-decoration: none;
   &:hover {
     text-decoration: underline;
@@ -12,14 +15,6 @@ const StyledLink = Styled.a`
 
 `;
 
-/**
- * Enlace a otra página
- * @param {string} somebody
- * @example
- * ´´´
- * <Link level="1" />
- *
- */
 const Link = props => (
   <StyledLink>{props.children}</StyledLink>
 );

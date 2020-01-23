@@ -1,16 +1,47 @@
 // APW 1.1
-// Aplcación principal
+// Punto de entrada
 
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-import App from './App';
+// Metadatos del producto
+import State, { initialState } from './metadata';
 
-//import * as Cache from './cache';
+// Componentes utilizados
+import Header from './components/organisms/Header';
 
+// Recursos disponibles
+import Home from './interfaces/Home';
+import Page from './interfaces/Page';
+
+// Estilo global
+import GlobalStyle from './style';
+
+
+// Crear componente raíz
+const App = () => {
+
+  return (
+    <div>
+      <GlobalStyle />
+      <State.Provider value={initialState}>
+        <Header />
+        <Router>
+          <Switch>
+            <Route path="/page">
+              <Page/>
+            </Route>
+            <Route path="/">
+              <Home/>
+            </Route>
+          </Switch>
+        </Router>
+      </State.Provider>
+    </div>
+  );
+
+}
+
+// Desplegar aplicación principal
 ReactDOM.render(<App />, document.getElementById('root'));
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-//serviceWorker.unregister();

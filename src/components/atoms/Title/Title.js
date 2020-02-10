@@ -1,13 +1,13 @@
 import React from 'react';
 import Styled from 'styled-components';
 
-const StyledSpan = Styled.span`
+const Container = Styled.span`
   padding: 10px;
   font-size: 2em;
 `;
 
 const Title = props => (
-  <StyledSpan>{props.children}</StyledSpan>
+  <Container>{props.children}</Container>
 );
 
 export default Title;

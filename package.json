@@ -7,14 +7,13 @@
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "3.2.0",
+    "react-scripts": "^3.3.1",
     "styled-components": "^4.4.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "start:dev": "react-scripts start & json-server --port 4000 --watch api/db.json",
+    "start": "PORT=2000 react-scripts start",
     "start:api": "json-server --port 4000 --watch api/db.json",
-    "start:guide": "styleguidist server",
+    "start:doc": "docz dev",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -35,7 +34,7 @@
     ]
   },
   "devDependencies": {
-    "json-server": "^0.15.1",
-    "react-styleguidist": "^10.2.1"
+    "docz": "^2.2.0",
+    "json-server": "^0.15.1"
   }
 }

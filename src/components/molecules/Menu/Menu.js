@@ -3,7 +3,7 @@ import Styled from 'styled-components';
 
 import Link from '../../atoms/Link';
 
-const List = Styled.ul`
+const Container = Styled.ul`
   li {
     display: inline;
     padding: 0 3px;
@@ -12,14 +12,14 @@ const List = Styled.ul`
 
 const Menu = props => (
 
-  <List>
+  <Container>
     { props.items.map((item, i) => (
         <li key={item.id}>
           <Link>{item.byname}</Link>
         </li>
       ))
     }
-  </List>
+  </Container>
 );
 
 export default Menu;

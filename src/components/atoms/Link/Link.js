@@ -5,7 +5,7 @@
 import React from 'react';
 import Styled from 'styled-components';
 
-const StyledLink = Styled.a`
+const Link = Styled.a`
   color: blue;
   text-decoration: none;
   &:hover {
@@ -14,9 +14,5 @@ const StyledLink = Styled.a`
   }
 
 `;
-
-const Link = props => (
-  <StyledLink>{props.children}</StyledLink>
-);
 
 export default Link;

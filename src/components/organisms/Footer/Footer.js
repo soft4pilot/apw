@@ -3,28 +3,27 @@ import Styled from 'styled-components';
 
 import State from '../../../metadata';
 
-import Brand from '../../molecules/Brand';
-import Menu from '../../molecules/Menu';
+import Email from '../../atoms/Email';
 
-const Container = Styled.header`
+const Container = Styled.footer`
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  background-color: #efefef;
+  justify-content: center;
+  background-color: #dedede;
+  padding: 20px;
 `;
 
-const Header = props => {
+const Footer = props => {
 
   // Estado de la aplicación
   const state = React.useContext(State);
 
   return (
     <Container>
-      <Brand name={state.company.name} />
-      <Menu items={state.resources} />
+      <Email href="mailto:{state.company.email}">{state.company.email}</Email>
     </Container>
   );
 
 }
 
-export default Header;
+export default Footer;

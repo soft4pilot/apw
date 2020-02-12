@@ -2,17 +2,19 @@ import {createGlobalStyle} from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
 
-  //@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
-
   * {
     box-sizing: border-box;
+  }
 
+  html {
+    height: 100%;
   }
 
   body {
-    font-family: 'Raleway', sans-serif;
+    height: 100%;
+    font-family: sans-serif;
     font-size: 12px;
-    background-color: #cecece;
+    background-color: #fefefe;
   }
 
 `;

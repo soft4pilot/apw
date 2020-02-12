@@ -10,9 +10,10 @@ import styled from 'styled-components';
 const Link = styled(RouterLink)`
   display: inline;
   padding: 0 3px;
-  color: grey;
+  color: black;
   text-decoration: ${props => props.selected ? 'underline' : 'none'};
   &:hover {
+    color: grey;
     cursor: pointer;
   }
 `;

@@ -5,7 +5,7 @@ export const initialState = {
     name: 'Empresa',
     slogan: 'Lema de la empresa',
     logo: 'http://placehold.it/100x100',
-    email: 'info@empresa.com.mx'
+    email: 'contacto@empresa.com.mx'
   },
   product: {
     name: 'APW',

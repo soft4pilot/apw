@@ -10,6 +10,7 @@ import State, { initialState } from './metadata';
 
 // Componentes utilizados
 import Header from './components/organisms/Header';
+import Footer from './components/organisms/Footer';
 
 // Recursos disponibles
 import Home from './interfaces/Home';
@@ -17,7 +18,6 @@ import Page from './interfaces/Page';
 
 // Estilo global
 import GlobalStyle from './style';
-
 
 // Crear componente raíz
 const App = () => {
@@ -36,6 +36,7 @@ const App = () => {
               <Home/>
             </Route>
           </Switch>
+          <Footer/>
         </Router>
       </State.Provider>
     </div>

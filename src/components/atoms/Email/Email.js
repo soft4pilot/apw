@@ -7,14 +7,15 @@ import { Link as RouterLink } from 'react-router-dom';
 
 import styled from 'styled-components';
 
-const Link = styled(RouterLink)`
+const Email = styled.a`
   display: inline;
   padding: 0 3px;
-  color: grey;
+  color: black;
   text-decoration: ${props => props.selected ? 'underline' : 'none'};
   &:hover {
+    color: grey;
     cursor: pointer;
   }
 `;
 
-export default Link;
+export default Email;

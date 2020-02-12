@@ -9,10 +9,7 @@ const Container = styled.nav`
   display: flex;
   align-items: center;
   justufy-content: space-between;
-  background-color: #efefef;
-
   padding: 10px;
-
 `;
 
 const SearchIcon = styled(Search)`

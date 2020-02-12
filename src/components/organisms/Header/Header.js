@@ -10,7 +10,7 @@ const Container = Styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #efefef;
+  background-color: #dedede;
 `;
 
 const Header = props => {

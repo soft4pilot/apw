@@ -5,17 +5,14 @@ import Logo from '../../atoms/Logo';
 import Title from '../../atoms/Title';
 
 const Container = Styled.div`
-  display: inline-block;
-  line-height: 120px;
-  height: 120px;
-  .left {
-    float: left;
-  }
+  display: flex;
+  align-items: center;
+  background-color: #efefef;
 `;
 
 const Brand = props => (
   <Container>
-    <Logo class="left" />
+    <Logo src='https://via.placeholder.com/60' />
     <Title>{props.name}</Title>
   </Container>
 );

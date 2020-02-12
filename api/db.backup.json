@@ -1,5 +1,5 @@
 {
-  "items": [
+  "data": [
     {
       "id": 1,
       "name": "Leanne Graham"
@@ -23,6 +23,10 @@
     {
       "id": 6,
       "name": "Mrs. Dennis Schulist"
+    },
+    {
+      "id": 7,
+      "name": "Kurtis Weissnat"
     },
     {
       "id": 8,

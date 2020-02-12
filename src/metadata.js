@@ -7,7 +7,7 @@ export const initialState = {
     logo: 'http://placehold.it/100x100',
     email: 'info@empresa.com.mx'
   },
-  service: {
+  product: {
     name: 'APW',
     version: '1.1',
     author: {

@@ -5,7 +5,7 @@ import useService from '../services'
 const Page = () => {
 
   // Acceso a los servicios
-  const users = useService('/users');
+  const users = useService('/items');
 
   // Inicialización de la interface
   useEffect(() => {

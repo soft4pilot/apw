@@ -26,8 +26,8 @@ const App = () => {
     <div>
       <GlobalStyle />
       <State.Provider value={initialState}>
-        <Header />
         <Router>
+          <Header />
           <Switch>
             <Route path="/page">
               <Page/>

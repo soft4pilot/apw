@@ -2,6 +2,7 @@ import React from 'react';
 import Styled from 'styled-components';
 
 import State from '../../../metadata';
+// Poner aquí el accoeso a datos...
 
 import Brand from '../../molecules/Brand';
 import Menu from '../../molecules/Menu';
@@ -18,10 +19,11 @@ const Header = props => {
   // Estado de la aplicación
   const state = React.useContext(State);
 
+  // Estructura del componente
   return (
     <Container>
-      <Brand name={state.company.name} />
-      <Menu items={state.resources} />
+      <Brand />
+      <Menu />
     </Container>
   );
 

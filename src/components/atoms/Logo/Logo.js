@@ -1,11 +1,20 @@
 import React from 'react';
 import Styled from 'styled-components';
 
-const Logo = Styled.img`
+import Image from './Logo.png';
+
+// Componente con estilo
+const StyleImage = Styled.img`
   height: 60px;
   margin: 10px;
   cursor: pointer;
-  background-image: url(../../../assets/logo.svg);
 `;
+
+
+const Logo = () => (
+
+  <StyleImage src={Image} />
+
+);
 
 export default Logo;

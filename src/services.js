@@ -5,7 +5,6 @@ import { useState } from 'react';
 
 import axios from "axios";
 
-
 // Definición del Hook
 const useService = (resource) => {
 
@@ -17,7 +16,7 @@ const useService = (resource) => {
   const request = axios.create({
 
     //baseURL: 'https://jsonplaceholder.typicode.com'
-    baseURL: 'http://localhost:4000'
+    baseURL: 'http://localhost:3001'
 
     // Aquí se puede agregar seguridad, formatos aceptados, etc.
 

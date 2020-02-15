@@ -5,11 +5,10 @@ import Image from './Logo.png';
 
 // Componente con estilo
 const StyleImage = Styled.img`
-  height: 60px;
-  margin: 10px;
+  height: 50px;
+  margin: 15px;
   cursor: pointer;
 `;
-
 
 const Logo = () => (
 

@@ -1,25 +1,24 @@
 import React from 'react';
-import styled from 'styled-components';
+import Styled from 'styled-components';
+import { FiSearch } from "react-icons/fi";
 
 import State from '../../../metadata';
-
-import { Search } from 'styled-icons/boxicons-regular/Search';
 
 import Link from '../../atoms/Link';
 
 // Componente con estilo
-const Container = styled.nav`
+const Container = Styled.nav`
+  /* Marco */
   display: flex;
   align-items: center;
   justufy-content: space-between;
   padding: 10px;
 `;
 
-// Ícono
-const SearchIcon = styled(Search)`
-  margin-left: 5px;
+const Icon = Styled(FiSearch)`
+  padding-left: 10px;
+  font-size: 32px;
 `;
-
 
 // Componente exportado
 const Menu = props => {
@@ -33,7 +32,7 @@ const Menu = props => {
       { state.resources.map((item, i) => (
         <Link key={i} to={item.route}>{item.byname}</Link>
       ))}
-      <SearchIcon size='24' />
+      <Icon />
     </Container>
   );
 

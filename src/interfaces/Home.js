@@ -1,6 +1,8 @@
 import React from 'react';
 import Styled from 'styled-components';
 
+import Product from '../components/molecules/Product';
+
 const Container = Styled.main`
   height: 100hv;
 `;
@@ -9,7 +11,7 @@ const Home = () => {
 
   return (
       <Container>
-        <h1>Página principal</h1>
+        <Product />
       </Container>
   );
 }

@@ -7,6 +7,8 @@ const GlobalStyle = createGlobalStyle`
   * {
     /* Posición */
     /* Recuadro */
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     /* Color */
     /* Texto */

@@ -25,7 +25,7 @@ const Page = () => {
         <h1>Página interna</h1>
         <ul>
           { users.data.map((user, i) => (
-            <li key={user.id} onClick={() => delUser(user.id)}>{user.name}</li>
+            <li key={i} onClick={() => delUser(user.id)}>{user.name}</li>
           )) }
         </ul>
       </main>

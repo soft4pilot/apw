@@ -10,6 +10,7 @@ const useService = (resource) => {
 
   // Buffer para mantener los datos del recurso
   const [data, setData] = useState([]);
+
   // Se puede incluir también espacio para otros datos: status, header, etc.
 
   // Configuración del llamado al servicio

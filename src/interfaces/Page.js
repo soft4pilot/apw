@@ -2,32 +2,30 @@ import React, { useState, useEffect } from 'react';
 
 import useService from '../services'
 
+import Items from '../components/organisms/Items'
+
 const Page = () => {
 
   // Acceso a los servicios
-  const users = useService('/items');
+  const items = useService('/items');
 
   // Inicialización de la interface
   useEffect(() => {
 
-    users.read();
+    items.read();
 
   }, []);
 
   const delUser = (id) => {
 
-    users.remove(id);
+    items.remove(id);
 
   }
 
   return (
       <main>
-        <h1>Página interna</h1>
-        <ul>
-          { users.data.map((user, i) => (
-            <li key={i} onClick={() => delUser(user.id)}>{user.name}</li>
-          )) }
-        </ul>
+        <Title>Items</Title>
+        <Items items={items.data} />
       </main>
   );
 }

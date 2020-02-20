@@ -4,7 +4,7 @@ import Styled from 'styled-components';
 import Product from '../components/molecules/Product';
 
 const Container = Styled.main`
-  height: 100hv;
+  padding: 20px;
 `;
 
 const Home = () => {

@@ -1,20 +1,28 @@
 import React from 'react';
 import Styled from 'styled-components';
 
-import Line from '../../molecules/Line';
+import Item from '../../molecules/Item';
 
 const Container = Styled.ul`
   padding: 20px;
   list-style: none;
 `;
 
-const Items = props => {
+const handleDelete = event => {
+
+  alert('Ouch!');
+
+  console.log(event);
+
+}
+
+const List = props => {
 
   // Estructura del componente
   return (
     <Container>
       { props.items.map(item => (
-        <Line key={item.id}>{item.name}</Line>
+        <Item key={item.id} handleDelete={() => handleDelete(item.id)}>{item.name}</Item>
         ))
       }
     </Container>
@@ -22,4 +30,4 @@ const Items = props => {
 
 }
 
-export default Items;
+export default List;

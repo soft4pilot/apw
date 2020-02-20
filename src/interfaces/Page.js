@@ -1,8 +1,14 @@
 import React, { useState, useEffect } from 'react';
+import Styled from 'styled-components';
 
 import useService from '../services'
 
-import Items from '../components/organisms/Items'
+import Title from '../components/atoms/Title'
+import List from '../components/organisms/List'
+
+const Container = Styled.main`
+  padding: 20px;
+`;
 
 const Page = () => {
 
@@ -23,10 +29,10 @@ const Page = () => {
   }
 
   return (
-      <main>
-        <Title>Items</Title>
-        <Items items={items.data} />
-      </main>
+      <Container>
+        <Title>Lista de elementos</Title>
+        <List items={items.data} />
+      </Container>
   );
 }
 

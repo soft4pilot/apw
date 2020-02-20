@@ -16,14 +16,6 @@ const Container = Styled.li`
   background-color: #f9f9f9;
 `;
 
-const sendDelete = (id) => {
-
-  alert('Ouch!');
-
-  // Enviar la instrucción al componente
-
-};
-
 // Componente exportado
 const Item = props => {
 
@@ -31,7 +23,7 @@ const Item = props => {
   return (
     <Container>
       <Label>{props.children}</Label>
-      <Icon onClick={() => sendDelete()} />
+      <Icon onClick={props.handleDelete}/>
     </Container>
   );
 

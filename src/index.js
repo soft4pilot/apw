@@ -1,12 +1,14 @@
 // APW 1.1
 // Punto de entrada
 
+// Libreías
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-// Metadatos del producto
-import State, { initialState } from './metadata';
+// Recursos de información
+import model from './model';
 
 // Componentes utilizados
 import Header from './components/organisms/Header';
@@ -25,20 +27,16 @@ const App = () => {
   return (
     <div>
       <GlobalStyle />
-      <State.Provider value={initialState}>
+      <Provider model={model}>
         <Router>
-          <Header />
+          <Header/>
           <Switch>
-            <Route path="/page">
-              <Page/>
-            </Route>
-            <Route path="/">
-              <Home/>
-            </Route>
+            <Route path="/page" component={Page}/>
+            <Route path="/" component={Home}/>
           </Switch>
           <Footer/>
         </Router>
-      </State.Provider>
+      </Provider>
     </div>
   );
 

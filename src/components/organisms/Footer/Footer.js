@@ -1,7 +1,6 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import Styled from 'styled-components';
-
-import State from '../../../metadata';
 
 import Email from '../../atoms/Email';
 
@@ -13,17 +12,28 @@ const Container = Styled.footer`
   padding: 20px;
 `;
 
+// Componente exportado
 const Footer = props => {
 
-  // Estado de la aplicación
-  const state = React.useContext(State);
+  // Propiedades
+  const {
+    company,
+  } = props;
 
+  // Estructura
   return (
     <Container>
-      <Email href="mailto:{state.company.email}">{state.company.email}</Email>
+      <Email href="mailto:{company.email}">{company.email}</Email>
     </Container>
   );
 
 }
 
-export default Footer;
+// Datos utilizados
+const mapStateToProps = (state) => {
+  return {
+    company: state.company
+  }
+}
+
+export default connect(mapStateToProps)(Footer);

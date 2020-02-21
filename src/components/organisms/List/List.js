@@ -12,8 +12,6 @@ const handleDelete = event => {
 
   alert('Ouch!');
 
-  console.log(event);
-
 }
 
 const List = props => {

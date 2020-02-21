@@ -2,8 +2,7 @@ import React from 'react';
 import Styled from 'styled-components';
 import { FiSearch } from "react-icons/fi";
 
-import State from '../../../metadata';
-
+// Componentes utilizados
 import Link from '../../atoms/Link';
 
 // Componente con estilo
@@ -15,6 +14,7 @@ const Container = Styled.nav`
   padding: 10px;
 `;
 
+// Íconos
 const Icon = Styled(FiSearch)`
   padding-left: 10px;
   font-size: 32px;
@@ -23,14 +23,16 @@ const Icon = Styled(FiSearch)`
 // Componente exportado
 const Menu = props => {
 
-  // Estado de la aplicación
-  const state = React.useContext(State);
+  // Propiedades
+  const {
+    resources,
+  } = props;
 
-  // Estructura del componente
+  // Estructura
   return (
     <Container>
-      { state.resources.map((item, i) => (
-        <Link key={i} to={item.route}>{item.byname}</Link>
+      { resources.map((resource, i) => (
+        <Link key={i} to={resource.route}>{resource.byname}</Link>
       ))}
       <Icon />
     </Container>

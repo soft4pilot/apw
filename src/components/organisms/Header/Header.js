@@ -1,8 +1,6 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import Styled from 'styled-components';
-
-import State from '../../../metadata';
-// Poner aquí el accoeso a datos...
 
 import Brand from '../../molecules/Brand';
 import Menu from '../../molecules/Menu';
@@ -14,19 +12,31 @@ const Container = Styled.header`
   background-color: #dedede;
 `;
 
+// Componente exportado
 const Header = props => {
 
-  // Estado de la aplicación
-  const state = React.useContext(State);
+  // Prpiedades
+  const {
+    company,
+    resources,
+  } = props;
 
-  // Estructura del componente
+  // Estructura
   return (
     <Container>
-      <Brand />
-      <Menu />
+      <Brand company={company} />
+      <Menu resources={resources} />
     </Container>
   );
 
 }
 
-export default Header;
+// Datos utilizados
+const mapStateToProps = model => {
+  return {
+    company: model.company,
+    resources: model.resources,
+  }
+}
+
+export default connect(mapStateToProps)(Header);

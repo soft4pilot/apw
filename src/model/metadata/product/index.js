@@ -1,17 +1,17 @@
 // APW 1.1
-// Recursos/Empresa (Reductor)
+// Recursos/Producto (Reductor)
 
 import types from "./types";
-import model from "./model";
+import product from "./model";
 
 // Reductor
-const reducer = (state = model, {type, payload} ) => {
+const reducer = (state = product, {type, payload} ) => {
     switch( type ) {
         case types.GET: {
           return state;
         }
         default:
-          return null;
+          return state;
     }
 }
 

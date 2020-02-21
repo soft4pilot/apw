@@ -1,8 +1,6 @@
 import React from 'react';
 import Styled from 'styled-components';
 
-import State from '../../../metadata';
-
 import Logo from '../../atoms/Logo';
 import Label from '../../atoms/Label';
 
@@ -15,14 +13,15 @@ const Container = Styled.div`
 // Componente exportado
 const Brand = props => {
 
-  // Estado de la aplicación
-  const state = React.useContext(State);
+  const {
+    company,
+  } = props;
 
   // Estructura del componente
   return (
     <Container>
       <Logo />
-      <Label size='2em'>{state.company.name}</Label>
+      <Label size='2em'>{company.name}</Label>
     </Container>
   );
 

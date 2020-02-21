@@ -7,7 +7,7 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-// Recursos de información
+// Modelo de datos
 import model from './model';
 
 // Componentes utilizados
@@ -27,7 +27,7 @@ const App = () => {
   return (
     <div>
       <GlobalStyle />
-      <Provider model={model}>
+      <Provider store={model}>
         <Router>
           <Header/>
           <Switch>

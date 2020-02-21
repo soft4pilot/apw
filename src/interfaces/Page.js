@@ -10,7 +10,7 @@ const Container = Styled.main`
   padding: 20px;
 `;
 
-const Page = () => {
+const Page = props => {
 
   // Acceso a los servicios
   const items = useService('/items');

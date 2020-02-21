@@ -2,10 +2,10 @@
 // Recursos/Recursos (Reductor)
 
 import types from "./types";
-import model from "./model";
+import resources from "./model";
 
 // Reductor
-const reducer = (state = model, {type, payload} ) => {
+const reducer = (state = resources, {type, payload} ) => {
     switch( type ) {
         case types.LIST: {
           return state;
@@ -14,7 +14,7 @@ const reducer = (state = model, {type, payload} ) => {
           return state.find(id => id == payload);
         }
         default:
-          return null;
+          return state;
     }
 }
 

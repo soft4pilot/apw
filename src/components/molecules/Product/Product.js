@@ -1,13 +1,12 @@
 import React from 'react';
 import Styled from 'styled-components';
 
-import State from '../../../metadata';
-
+// Componentes utilizados
 import Title from '../../atoms/Title';
 import Subtitle from '../../atoms/Subtitle';
 import Paragraph from '../../atoms/Paragraph';
 
-// Componente contenedro
+// Componente contenedor
 const Container = Styled.div`
   /* Marco */
   padding: 40px 20px;
@@ -18,15 +17,17 @@ const Container = Styled.div`
 // Componente exportado
 const Product = props => {
 
-  // Estado de la aplicación
-  const state = React.useContext(State);
+  // Propiedades
+  const {
+    product
+  } = props;
 
-  // Estructura del componente
+  // Estructura
   return (
     <Container>
-      <Title inline>{state.product.name}</Title>
-      <Subtitle inline>{state.product.version}</Subtitle>
-      <Paragraph>{state.product.summary}</Paragraph>
+      <Title inline>{product.name}</Title>
+      <Subtitle inline>{product.version}</Subtitle>
+      <Paragraph>{product.summary}</Paragraph>
     </Container>
   );
 

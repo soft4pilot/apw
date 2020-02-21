@@ -6,18 +6,18 @@ import React from 'react';
 import { createStore, combineReducers } from 'redux';
 
 // Importar reductores
-import company from './metadata/company/reducer';
-import product from './metadata/product/reducer';
-import subjects from './metadata/subjects/reducer';
-import user from './metadata/user/reducer';
+import company from './metadata/company';
+import product from './metadata/product';
+import resources from './metadata/resources';
+import user from './metadata/user';
 
 const reducers = combineReducers({
   company,
   product,
-  subjects,
+  resources,
   user
 });
 
-const resources = createStore(reducers);
+const model = createStore(reducers);
 
-export default resources;
+export default model;

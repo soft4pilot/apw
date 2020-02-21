@@ -1,7 +1,7 @@
 // APW 1.1
 // Recursos/Recursos (Modelo)
 
-const model = [
+const resources = [
   {
     id: 'home',
     name: 'Página principal',
@@ -29,4 +29,4 @@ const model = [
   }
 ];
 
-export default model;
+export default resources;

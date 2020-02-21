@@ -1,7 +1,7 @@
 // APW 1.1
 // Recursos/Producto (Modelo)
 
-const model = {
+const product = {
   name: 'Producto',
   version: '1.1',
   summary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tincidunt hendrerit imperdiet. Phasellus eget nulla vel nisi laoreet faucibus quis id neque.',
@@ -16,4 +16,4 @@ const model = {
   }
 };
 
-export default model;
+export default product;

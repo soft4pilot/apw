@@ -1,5 +1,5 @@
 // APW 1.1
-// Recursos/Recursos (Reductor)
+// Modelo/Recursos (Reductor)
 
 import types from "./types";
 import user from "./model";

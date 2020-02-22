@@ -1,5 +1,5 @@
 // APW 1.1
-// Recursos/Empresa (Modelo)
+// Modelo/Empresa (Modelo)
 
 const company = {
   name: 'Empresa',

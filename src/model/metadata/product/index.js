@@ -1,5 +1,5 @@
 // APW 1.1
-// Recursos/Producto (Reductor)
+// Modelo/Producto (Reductor)
 
 import types from "./types";
 import product from "./model";

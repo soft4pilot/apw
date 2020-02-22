@@ -1,5 +1,5 @@
 // APW 1.1
-// Recursos/Recursos (Tipos)
+// Modelo/Recursos (Tipos)
 
 // Constantes
 const GET = "metadata/resources/GET";

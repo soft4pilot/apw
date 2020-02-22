@@ -1,5 +1,5 @@
 // APW 1.1
-// Recursos/Producto (Tipos)
+// Modelo/Producto (Tipos)
 
 // Constantes
 const GET = "metadata/product/GET";

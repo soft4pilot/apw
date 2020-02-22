@@ -1,5 +1,5 @@
 // APW 1.1
-// Recursos/Recursos (Modelo)
+// Modelo/Recursos (Modelo)
 
 const resources = [
   {

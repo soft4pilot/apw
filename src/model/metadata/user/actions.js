@@ -1,5 +1,5 @@
 // APW 1.1
-// Recursos/Usuario (Acciones)
+// Modelo/Usuario (Acciones)
 
 import types from "./types";
 

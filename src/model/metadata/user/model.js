@@ -1,5 +1,5 @@
 // APW 1.1
-// Recursos/Usuario (Modelo)
+// Modelo/Usuario (Modelo)
 
 const user = {
   name: null,

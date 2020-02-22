@@ -1,5 +1,5 @@
 // APW 1.1
-// Recursos/Producto (Modelo)
+// Modelo/Producto (Modelo)
 
 const product = {
   name: 'Producto',

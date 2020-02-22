@@ -1,5 +1,5 @@
 // APW 1.1
-// Recursos/Empresa (Acciones)
+// Modelo/Empresa (Acciones)
 
 import types from "./types";
 

@@ -1,5 +1,5 @@
 // APW 1.1
-// Recursos/Empresa (Reductor)
+// Modelo/Empresa (Reductor)
 
 import types from "./types";
 import company from "./model";

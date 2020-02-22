@@ -1,5 +1,5 @@
 // APW 1.1
-// Recursos/Empresa (Tipos)
+// Modelo/Empresa (Tipos)
 
 // Constantes
 const GET = "metadata/company/GET";

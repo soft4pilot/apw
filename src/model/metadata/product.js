@@ -1,6 +1,10 @@
 // APW 1.1
-// Modelo/Producto (Modelo)
+// Modelo - Metadatos - Producto
 
+// Tipos de acciones
+// ...
+
+// Modelo de datos
 const product = {
   name: 'Producto',
   version: '1.1',
@@ -16,4 +20,14 @@ const product = {
   }
 };
 
-export default product;
+// Creadores de acciones
+// ...
+
+// Reductor
+export default (state = product, {type, payload} ) => {
+  switch( type ) {
+    // ...
+    default:
+      return state;
+  }
+}

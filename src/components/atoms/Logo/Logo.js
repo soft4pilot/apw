@@ -1,7 +1,6 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import Styled from 'styled-components';
-
-import Image from './Logo.png';
 
 // Componente con estilo
 const StyleImage = Styled.img`
@@ -10,10 +9,15 @@ const StyleImage = Styled.img`
   cursor: pointer;
 `;
 
-const Logo = () => (
-
-  <StyleImage src={Image} />
-
+const Logo = props => (
+  <StyleImage src={props.logo} />
 );
 
-export default Logo;
+// Obtener datos del modelo
+const mapStateToProps = state => {
+  return {
+    logo: state.company.logo
+  }
+}
+
+export default connect(mapStateToProps)(Logo);

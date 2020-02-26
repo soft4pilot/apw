@@ -3,10 +3,12 @@
 
 // Librerías
 import React from 'react';
+
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 
 // Acceso a la API
-import apiMidleware from "./api";
+import axios from 'axios';
+import axiosMiddleware from 'redux-axios-middleware';
 
 // Importar metadatos
 import company from './metadata/company';
@@ -14,10 +16,10 @@ import product from './metadata/product';
 import resources from './metadata/resources';
 import user from './metadata/user';
 
-// Importar recursos
-import items from './items';
+// Importar recursos de información
+import items from './data/items';
 
-// Combinar reductores
+// Combinar todos los reductores
 const reducers = combineReducers({
   company,
   product,
@@ -26,7 +28,13 @@ const reducers = combineReducers({
   items
 });
 
+// Configurar el acceso al gestor de contenido
+const client = axios.create({
+  baseURL: 'http://localhost:3001',
+  responseType: 'json'
+});
+
 // Crear el modelo de datos
-const model = createStore(reducers, applyMiddleware(apiMidleware));
+const model = createStore(reducers, applyMiddleware(axiosMiddleware(client)));
 
 export default model;

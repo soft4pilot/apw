@@ -1,7 +1,11 @@
-import React, { useState, useEffect } from 'react';
+// APW 1.1
+// Interfaces - Page
+
+import React, { useEffect } from 'react';
+import { connect } from 'react-redux';
 import Styled from 'styled-components';
 
-import useService from '../services'
+import { getItems } from '../model/data/items';
 
 import Title from '../components/atoms/Title'
 import List from '../components/organisms/List'
@@ -12,28 +16,36 @@ const Container = Styled.main`
 
 const Page = props => {
 
-  // Acceso a los servicios
-  const items = useService('/items');
-
   // Inicialización de la interface
   useEffect(() => {
 
-    items.read();
+    props.getItems().then(() => {
+    console.log('OK');
+    })
+    .catch((response) => {
+      console.log('ERROR');
+    });
 
   }, []);
-
-  const delUser = (id) => {
-
-    items.remove(id);
-
-  }
 
   return (
       <Container>
         <Title>Lista de elementos</Title>
-        <List items={items.data} />
+        <List items={props.items} />
       </Container>
   );
 }
 
-export default Page;
+// Obtener datos del modelo
+const mapStateToProps = state => {
+  return {
+    items: state.items
+  }
+}
+
+// Obtener acciones del modelo
+const mapDispatchToProps = {
+  getItems
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Page);

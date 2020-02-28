@@ -1,5 +1,5 @@
 // APW 1.1
-// Punto de entrada
+// Aplicación principal
 
 // Libreías
 import React from 'react';

@@ -15,16 +15,10 @@ const Container = Styled.main`
 // Interfaz exportada
 const Home = props => {
 
-  // Propiedades
-  const {
-    product,
-  } = props;
-
   // Estructura
   return (
       <Container>
-        <Product product={product}/>
-
+        <Product product={props.product}/>
       </Container>
   );
 }

@@ -26,7 +26,7 @@ const Page = props => {
   return (
       <Container>
         <Title>Lista de elementos</Title>
-        <List items={props.items} handleDelete={props.deleteItem}/>
+        <List items={props.items} onDeleteItem={props.deleteItem}/>
       </Container>
   );
 }

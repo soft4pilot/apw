@@ -14,10 +14,12 @@ const List = props => {
   return (
     <Container>
       { props.items.map(item => (
-        <Item key={item.id} handleDelete={() => props.handleDelete(item.id)}>{item.name}</Item>
+        <Item key={item.id} onDeleteItem={() => props.onDeleteItem(item.id)} onClick={props => props.isEditing = ! props.isEditing} deletable>{item.name}</Item>
         ))
       }
+      <Item key={'NEW'} isEditing></Item>
     </Container>
+
   );
 
 }

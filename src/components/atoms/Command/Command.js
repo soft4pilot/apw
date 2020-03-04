@@ -4,7 +4,7 @@ import { Icon } from 'react-icons-kit'
 
 const Command = props => (
 
-  <Icon icon={props.icon} onClick={props.doCommand} />
+  <Icon icon={props.icon} onClick={props.action} />
 
 );
 

@@ -31,7 +31,7 @@ const Menu = props => {
       { resources.map((resource, i) => (
         <Link key={i} to={resource.route}>{resource.byname}</Link>
       ))}
-      <Command icon={search} doCommand={() => alert('Ouch!')} />
+      <Command icon={search} action={() => alert('Ouch!')} />
     </Container>
   );
 

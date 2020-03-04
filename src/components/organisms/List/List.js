@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Styled from 'styled-components';
 
+import { plus } from 'react-icons-kit/fa/plus'
+
+import Command from '../../atoms/Command';
 import Item from '../../molecules/Item';
 
 const Container = Styled.ul`
@@ -8,18 +11,20 @@ const Container = Styled.ul`
   list-style: none;
 `;
 
+// Componente exportado
 const List = props => {
+
+  const  [newValue, setNewValue] = useState(props.children);
 
   // Estructura del componente
   return (
     <Container>
       { props.items.map(item => (
-        <Item key={item.id} onDeleteItem={() => props.onDeleteItem(item.id)} onClick={props => props.isEditing = ! props.isEditing} deletable>{item.name}</Item>
+        <Item key={item.id} doAccept={() => console.log('UPDATE CALL')} doCancel={() => props.doDelete(item.id)}>{item.name}</Item>
         ))
       }
-      <Item key={'NEW'} isEditing></Item>
+      <Item key={'new'} doAccept={() => props.doCreate({name: newValue})} doCancel={() => console.log('')}>{newValue}</Item>
     </Container>
-
   );
 
 }

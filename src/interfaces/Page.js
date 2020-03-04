@@ -5,7 +5,7 @@ import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import Styled from 'styled-components';
 
-import { getItems, deleteItem } from '../model/data/items';
+import { createItem, readItems, updateItem, deleteItem } from '../model/data/items';
 
 import Title from '../components/atoms/Title'
 import List from '../components/organisms/List'
@@ -19,14 +19,14 @@ const Page = props => {
   // Inicialización de la interface
   useEffect(() => {
 
-    props.getItems();
+    props.readItems();
 
   }, []);
 
   return (
       <Container>
         <Title>Lista de elementos</Title>
-        <List items={props.items} onDeleteItem={props.deleteItem}/>
+        <List items={props.items} doCreate={props.createItem} doUpdate={props.updateItem} doDelete={props.deleteItem}/>
       </Container>
   );
 }
@@ -40,8 +40,12 @@ const mapStateToProps = state => {
 
 // Obtener acciones del modelo
 const mapDispatchToProps = {
-  getItems,
+
+  createItem,
+  readItems,
+  updateItem,
   deleteItem
+
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Page);

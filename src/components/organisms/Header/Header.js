@@ -1,6 +1,7 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import Styled from 'styled-components';
+
+import { connect } from 'react-redux';
 
 import Brand from '../../molecules/Brand';
 import Menu from '../../molecules/Menu';

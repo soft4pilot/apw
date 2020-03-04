@@ -18,16 +18,19 @@ export const DELETE = 'data/items/DELETE';
 export const DELETE_SUCCESS = 'data/items/DELETE_SUCCESS';
 export const DELETE_FAIL = 'data/items/DELETE_FAIL';
 
+export const ENTER_EDIT_MODE = 'data/items/ENTER_EDIT_MODE';
+
 // Estado predeterminado
 const items = [];
 
 // Reductor
 export default (state = items, {type, payload} ) => {
+
   switch (type) {
     case POST:
       return state;
     case POST_SUCCESS:
-      return [...payload.data];
+      return [...state, payload.data];
     case POST_FAIL:
       console.log('ERROR', payload);
       return state;
@@ -39,9 +42,10 @@ export default (state = items, {type, payload} ) => {
       console.log('ERROR', payload);
       return state;
     case PUT:
-      return state;
+      return [...state];
     case PUT_SUCCESS:
-      return [...payload.data];
+    console.log(payload);
+      return state.map(item => item.id === payload.data.id ? payload.data : item);
     case PUT_FAIL:
       console.log('ERROR', payload);
       return state;
@@ -49,7 +53,8 @@ export default (state = items, {type, payload} ) => {
       return state;
     case DELETE_SUCCESS:
       console.log('SUCCESS');
-      return state.filter(item => item.id !== payload.data.id)
+      console.log(payload);
+      return state.filter(item => item.id !== payload.data.id);
     case DELETE_FAIL:
       console.log('ERROR', payload);
       return state;
@@ -58,8 +63,8 @@ export default (state = items, {type, payload} ) => {
   }
 }
 
-// Acción: Obtener elementos
-export const addItem = data => ({
+// Acción: Crear elemento
+export const createItem = data => ({
   type: POST,
   payload: {
     request: {
@@ -70,8 +75,8 @@ export const addItem = data => ({
   }
 });
 
-// Acción: Obtener elementos
-export const getItems = () => ({
+// Acción: Leer elementos
+export const readItems = () => ({
   type: GET,
   payload: {
     request: {
@@ -81,7 +86,7 @@ export const getItems = () => ({
   }
 });
 
-// Acción: Obtener elementos
+// Acción: Actualizar elemento
 export const updateItem = (id, data) => ({
   type: PUT,
   payload: {
@@ -93,7 +98,7 @@ export const updateItem = (id, data) => ({
   }
 });
 
-// Acción: Obtener elementos
+// Acción: Eliminar elemento
 export const deleteItem = id => ({
   type: DELETE,
   payload: {

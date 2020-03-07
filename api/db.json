@@ -1,23 +1,28 @@
 {
   "items": [
     {
-      "id": 1,
-      "name": "José"
+      "text": "José Antonio",
+      "id": 1
     },
     {
-      "id": 2,
-      "name": "Alma"
+      "text": "Alma María Eugenia",
+      "id": 2
     },
     {
       "id": 3,
-      "name": "Pablo"
+      "text": "Pablo"
     },
     {
-      "id": 4,
-      "name": "Luz"
+      "text": "Luz Andrea",
+      "id": 4
     },
     {
+      "text": "Alma Ximena",
       "id": 5
+    },
+    {
+      "text": "Caballo Cherokee",
+      "id": 6
     }
   ]
 }

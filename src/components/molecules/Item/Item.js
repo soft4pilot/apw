@@ -7,9 +7,8 @@ import { check } from 'react-icons-kit/fa/check'
 import { remove } from 'react-icons-kit/fa/remove'
 
 import Command from '../../atoms/Command';
-import Label from '../../atoms/Label';
 
-// Contenedro del componente
+// Contenedor del componente
 const Container = Styled.li`
 
   display: flex;
@@ -21,34 +20,41 @@ const Container = Styled.li`
   background-color: #f9f9f9;
   cursor: pointer;
 
-`;
+  input {
 
-const Content = Styled.input`
+    flex: auto;
+    margin-right: 1em;
 
-  flex: auto;
-  margin-right: 1em;
+    background: #fdfdfd;
+    border-style: none;
+    font-size: ${props => props.size ? props.size : '1em'};
+    line-height: ${props => props.size ? props.size + props.size / 2 : '1.5em'};
 
-  background: #fdfdfd;
-  border-style: none;
-  font-size: ${props => props.size ? props.size : '1em'};
-  line-height: ${props => props.size ? props.size + props.size / 2 : '1.5em'};
+  }
 
 `;
 
 // Componente exportado
 const Item = props => {
 
+  const {
+    dataInput,
+    dataChange,
+    deleteRequest
+  } = props;
 
+  const [value, setValue] = useState(props.value ? props.value : '');
 
   return(
-  <Container>
-    <Content type='text' defaultValue={props.children} />
-    <div>
-      <Command icon={check} action={props.doAccept} />
-      <Command icon={remove} action={props.doCancel} />
-    </div>
-  </Container>
-);
+    <Container>
+      <input type="text" value={value} onChange={event => setValue(event.target.value)} />
+      <div>
+        { dataChange && <Command icon={check} action={() => { dataChange(value); }} /> }
+        { deleteRequest && <Command icon={remove} action={deleteRequest} /> }
+        { dataInput && value && <Command icon={check} action={() => { dataInput(value); setValue('')}} /> }
+      </div>
+    </Container>
+  );
 
 }
 

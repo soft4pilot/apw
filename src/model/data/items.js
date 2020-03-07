@@ -1,6 +1,8 @@
 // APW 1.1
 // Modelo - Datos - Items
 
+// NOTA: EL DESAFÍO ES CONVERTIR ESTO EN UN HOOK (useData o useResource o UseApi) QUE FECIBA COMO PARÄMETROS: resource, defaultValue
+
 // Tipos de acciones
 export const POST = 'data/items/POST';
 export const POST_SUCCESS = 'data/items/POST_SUCCESS';
@@ -27,37 +29,27 @@ const items = [];
 export default (state = items, {type, payload} ) => {
 
   switch (type) {
-    case POST:
-      return state;
     case POST_SUCCESS:
-      return [...state, payload.data];
-    case POST_FAIL:
-      console.log('ERROR', payload);
-      return state;
-    case GET:
-      return state;
+      return state.concat([payload.data]); // Otra manera de hacerlo --> return [...state, payload.data ];
     case GET_SUCCESS:
       return [...payload.data];
-    case GET_FAIL:
-      console.log('ERROR', payload);
-      return state;
-    case PUT:
-      return [...state];
     case PUT_SUCCESS:
-    console.log(payload);
-      return state.map(item => item.id === payload.data.id ? payload.data : item);
-    case PUT_FAIL:
-      console.log('ERROR', payload);
-      return state;
-    case DELETE:
-      return state;
+      return state.map(item => {
+        if (item.id !== payload.data.id) return item;
+        return {
+          ...item,
+          text: payload.data.text
+        }
+      });
     case DELETE_SUCCESS:
-      console.log('SUCCESS');
-      console.log(payload);
-      return state.filter(item => item.id !== payload.data.id);
+      return state.filter(item => item.id !== payload.config.params.id);
     case DELETE_FAIL:
-      console.log('ERROR', payload);
       return state;
+    case POST_FAIL:
+    case GET_FAIL:
+    case PUT_FAIL:
+    case DELETE_FAIL:
+    console.log('ERROR in data/items/:', payload);
     default:
       return state;
   }
@@ -70,7 +62,18 @@ export const createItem = data => ({
     request: {
       method: 'post',
       url: '/items',
-      data: data
+      data
+    }
+  }
+});
+
+// Acción: Leer elementos
+export const readItem = id => ({
+  type: GET,
+  payload: {
+    request: {
+      method: 'get',
+      url: `/items/${id}`
     }
   }
 });
@@ -93,7 +96,7 @@ export const updateItem = (id, data) => ({
     request: {
       method: 'put',
       url: `/items/${id}`,
-      data: data
+      data
     }
   }
 });
@@ -104,7 +107,10 @@ export const deleteItem = id => ({
   payload: {
     request: {
       method: 'delete',
-      url: `/items/${id}`
+      url: `/items/${id}`,
+      params: {
+        id
+      }
     }
   }
 });

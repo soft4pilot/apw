@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Styled from 'styled-components';
 
 import { plus } from 'react-icons-kit/fa/plus'
@@ -14,16 +14,14 @@ const Container = Styled.ul`
 // Componente exportado
 const List = props => {
 
-  const  [newValue, setNewValue] = useState(props.children);
-
   // Estructura del componente
   return (
     <Container>
       { props.items.map(item => (
-        <Item key={item.id} doAccept={() => console.log('UPDATE CALL')} doCancel={() => props.doDelete(item.id)}>{item.name}</Item>
+        <Item key={item.id} value={item.text} dataChange={value => props.updateItem(item.id, {text: value})} deleteRequest={() => props.deleteItem(item.id)} />
         ))
       }
-      <Item key={'new'} doAccept={() => props.doCreate({name: newValue})} doCancel={() => console.log('')}>{newValue}</Item>
+      <Item key={0} value={''} dataInput={value => { props.addItem({text: value});}} />
     </Container>
   );
 

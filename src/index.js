@@ -25,19 +25,17 @@ import GlobalStyle from './style';
 const App = () => {
 
   return (
-    <div>
+    <Provider store={model}>
       <GlobalStyle />
-      <Provider store={model}>
-        <Router>
-          <Header/>
-          <Switch>
-            <Route path="/page" component={Page}/>
-            <Route path="/" component={Home}/>
-          </Switch>
-          <Footer/>
-        </Router>
-      </Provider>
-    </div>
+      <Router>
+        <Header/>
+        <Switch>
+          <Route path="/page" component={Page}/>
+          <Route path="/" component={Home}/>
+        </Switch>
+        <Footer/>
+      </Router>
+    </Provider>
   );
 
 }

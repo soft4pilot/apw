@@ -25,7 +25,7 @@ const Header = props => {
   // Estructura
   return (
     <Container>
-      <Brand company={company} />
+      <Brand />
       <Menu resources={resources} />
     </Container>
   );
@@ -35,7 +35,6 @@ const Header = props => {
 // Datos utilizados
 const mapStateToProps = model => {
   return {
-    company: model.company,
     resources: model.resources,
   }
 }

@@ -1,6 +1,8 @@
 import React from 'react';
 import Styled from 'styled-components';
 
+import { connect } from 'react-redux';
+
 import Logo from '../Logo';
 import Label from '../Label';
 
@@ -27,4 +29,11 @@ const Brand = props => {
 
 }
 
-export default Brand;
+// Datos utilizados
+const mapStateToProps = model => {
+  return {
+    company: model.company
+  }
+}
+
+export default connect(mapStateToProps)(Brand);

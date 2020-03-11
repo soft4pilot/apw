@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 import Styled from 'styled-components';
 
 // Componentes utilizados
-import Product from '../components/molecules/Product';
+import Product from '../components/Product';
 
 const Container = Styled.main`
   padding: 20px;

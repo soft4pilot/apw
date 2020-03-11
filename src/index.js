@@ -11,8 +11,8 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import model from './model';
 
 // Componentes utilizados
-import Header from './components/organisms/Header';
-import Footer from './components/organisms/Footer';
+import Header from './components/Header';
+import Footer from './components/Footer';
 
 // Recursos disponibles
 import Home from './interfaces/Home';

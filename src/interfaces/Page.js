@@ -7,8 +7,8 @@ import Styled from 'styled-components';
 
 import { createItem, readItems, updateItem, deleteItem } from '../model/data/items';
 
-import Title from '../components/atoms/Title'
-import List from '../components/organisms/List'
+import Title from '../components/Title'
+import List from '../components/List'
 
 const Container = Styled.main`
   padding: 20px;

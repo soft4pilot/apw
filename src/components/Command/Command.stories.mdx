@@ -1,6 +1,7 @@
-import { Meta } from '@storybook/addon-docs/blocks';
+import { Meta, Story } from '@storybook/addon-docs/blocks';
 
 import Command from './Command';
+import { camera } from 'react-icons-kit/fa/camera';
 
 <Meta
   title="Átomos/Comando"
@@ -9,4 +10,8 @@ import Command from './Command';
 
 ## Comando
 
-Descripción del componente
+Ícono con una acción asociada (haz click en el ícono)
+
+<Story name="Ícono">
+  <Command icon={camera} action={() => alert('Flash!')} />
+</Story>

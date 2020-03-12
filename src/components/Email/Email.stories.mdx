@@ -1,4 +1,4 @@
-import { Meta } from '@storybook/addon-docs/blocks';
+import { Meta, Story } from '@storybook/addon-docs/blocks';
 
 import Email from './Email';
 
@@ -7,6 +7,10 @@ import Email from './Email';
   component={Email}
 />
 
-## Correo
+## Correo electrónico
 
-Descripción del componente
+Enlace a una dirección de correo
+
+<Story name="Básico">
+  <Email href="mailto:josesteva@gmail.com">josesteva@gmail.com</Email>
+</Story>

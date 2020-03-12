@@ -4,6 +4,7 @@
 // Libreías
 import React from 'react';
 import { Provider } from 'react-redux';
+import { BrowserRouter as Router } from "react-router-dom";
 import { addDecorator } from '@storybook/react';
 
 // Modelo de datos
@@ -17,7 +18,9 @@ addDecorator(Stories => (
 
   <Provider store={model}>
       <GlobalStyle />
-      <Stories />
+      <Router>
+        <Stories />
+      </Router>
   </Provider>
 
 ));

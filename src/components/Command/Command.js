@@ -2,9 +2,13 @@ import React from 'react';
 import Styled from 'styled-components';
 import { Icon } from 'react-icons-kit'
 
+const StyledIcon = Styled(Icon)`
+  cursor: pointer;
+`;
+
 const Command = props => (
 
-  <Icon icon={props.icon} onClick={props.action} />
+  <StyledIcon icon={props.icon} onClick={props.action} />
 
 );
 

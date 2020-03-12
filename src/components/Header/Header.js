@@ -1,8 +1,6 @@
 import React from 'react';
 import Styled from 'styled-components';
 
-import { connect } from 'react-redux';
-
 import Brand from '../Brand';
 import Menu from '../Menu';
 
@@ -16,27 +14,14 @@ const Container = Styled.header`
 // Componente exportado
 const Header = props => {
 
-  // Prpiedades
-  const {
-    company,
-    resources,
-  } = props;
-
   // Estructura
   return (
     <Container>
       <Brand />
-      <Menu resources={resources} />
+      <Menu />
     </Container>
   );
 
 }
 
-// Datos utilizados
-const mapStateToProps = model => {
-  return {
-    resources: model.resources,
-  }
-}
-
-export default connect(mapStateToProps)(Header);
+export default Header;

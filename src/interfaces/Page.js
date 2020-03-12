@@ -2,7 +2,6 @@
 // Interfaces - Page
 
 import React, { useEffect } from 'react';
-import { connect } from 'react-redux';
 import Styled from 'styled-components';
 
 import { createItem, readItems, updateItem, deleteItem } from '../model/data/items';

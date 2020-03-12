@@ -1,8 +1,8 @@
+// Librerias
 import React from 'react';
 import Styled from 'styled-components';
-
+import { connect } from 'react-redux';
 import {search} from 'react-icons-kit/fa/search'
-
 
 // Componentes utilizados
 import Command from '../Command';
@@ -10,7 +10,6 @@ import Link from '../Link';
 
 // Componente con estilo
 const Container = Styled.nav`
-  /* Marco */
   display: flex;
   align-items: center;
   justufy-content: space-between;
@@ -37,4 +36,11 @@ const Menu = props => {
 
 }
 
-export default Menu;
+// Datos utilizados
+const mapStateToProps = model => {
+  return {
+    resources: model.resources,
+  }
+}
+
+export default connect(mapStateToProps)(Menu);

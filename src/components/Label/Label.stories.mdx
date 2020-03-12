@@ -1,4 +1,4 @@
-import { Meta } from '@storybook/addon-docs/blocks';
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
 
 import Label from './Label';
 
@@ -9,4 +9,12 @@ import Label from './Label';
 
 ## Etiqueta
 
-Descripción del componente
+Distintos tipos de etiquetas:
+
+<Story name="Básico">
+  <Label>Etiqueta de tamaño normal</Label>
+</Story>
+
+<Story name="Con tamaño">
+  <Label size="1.2em">Etiqueta con diferente tamaño (1.2em)</Label>
+</Story>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import Styled from 'styled-components';
 
 // Componentes utilizados
@@ -33,4 +34,11 @@ const Product = props => {
 
 }
 
-export default Product;
+// Metadatos utilizados
+const mapStateToProps = (state) => {
+  return {
+    product: state.product,
+  }
+}
+
+export default connect(mapStateToProps)(Product);

@@ -30,7 +30,7 @@ const reducers = combineReducers({
 
 // Configurar el acceso al gestor de contenido
 const client = axios.create({
-  baseURL: 'http://localhost:3001',
+  baseURL: 'http://132.248.31.70:3000/pruebas',
   responseType: 'json'
 });
 

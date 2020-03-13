@@ -30,15 +30,15 @@ export default (state = items, {type, payload} ) => {
 
   switch (type) {
     case POST_SUCCESS:
-      return state.concat([payload.data]); // Otra manera de hacerlo --> return [...state, payload.data ];
+      return state.concat([payload.data.data]); // Otra manera de hacerlo --> return [...state, payload.data ];
     case GET_SUCCESS:
-      return [...payload.data];
+      return [...payload.data.data];
     case PUT_SUCCESS:
       return state.map(item => {
         if (item.id !== payload.data.id) return item;
         return {
           ...item,
-          text: payload.data.text
+          text: payload.data.data.text
         }
       });
     case DELETE_SUCCESS:
@@ -61,7 +61,7 @@ export const createItem = data => ({
   payload: {
     request: {
       method: 'post',
-      url: '/items',
+      url: '/items/items',
       data
     }
   }
@@ -73,7 +73,7 @@ export const readItem = id => ({
   payload: {
     request: {
       method: 'get',
-      url: `/items/${id}`
+      url: `/items/items/${id}`
     }
   }
 });
@@ -84,7 +84,7 @@ export const readItems = () => ({
   payload: {
     request: {
       method: 'get',
-      url: '/items'
+      url: '/items/items'
     }
   }
 });
@@ -94,8 +94,8 @@ export const updateItem = (id, data) => ({
   type: PUT,
   payload: {
     request: {
-      method: 'put',
-      url: `/items/${id}`,
+      method: 'patch',
+      url: `/items/items/${id}`,
       data
     }
   }
@@ -107,7 +107,7 @@ export const deleteItem = id => ({
   payload: {
     request: {
       method: 'delete',
-      url: `/items/${id}`,
+      url: `/items/items/${id}`,
       params: {
         id
       }

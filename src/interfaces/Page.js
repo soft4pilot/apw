@@ -4,6 +4,8 @@
 import React, { useEffect } from 'react';
 import Styled from 'styled-components';
 
+import { connect } from 'react-redux';
+
 import { createItem, readItems, updateItem, deleteItem } from '../model/data/items';
 
 import Title from '../components/Title'

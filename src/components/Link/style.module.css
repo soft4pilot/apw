@@ -1,0 +1,14 @@
+.link {
+  display: inline;
+  padding: 0 3px;
+  color: black;
+}
+
+.link:hover {
+  color: grey;
+  cursor: pointer;
+}
+
+.selected {
+  text-decoration: underline;
+}

@@ -1,0 +1,24 @@
+import { Meta, Story } from '@storybook/addon-docs/blocks';
+
+import Item from './index';
+
+<Meta
+  title="Átomos/Elemento"
+  component={Item}
+/>
+
+## Elemento
+
+Elemento de lista
+
+<Story name="Básico">
+  <ul>
+    <Item key={0} value="Texto del elemnto" />
+  </ul>
+</Story>
+
+<Story name="Con comandos">
+  <ul>
+    <Item key={0} value="Texto del elemnto" dataChange={() => alert("Evento: dataChange")} deleteRequest={() => alert("Evento: deleteRequest")} />
+  </ul>
+</Story>

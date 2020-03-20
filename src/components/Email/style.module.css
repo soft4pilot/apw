@@ -1,0 +1,11 @@
+
+.email {
+  display: inline;
+  padding: 0 3px;
+  color: black;
+}
+
+.email:hover {
+  color: grey;
+  cursor: pointer;
+}

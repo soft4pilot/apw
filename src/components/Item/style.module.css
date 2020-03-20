@@ -1,0 +1,28 @@
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 3px;
+  padding: 6px;
+  border-style: none;
+  background-color: #f9f9f9;
+  cursor: pointer;
+
+}
+
+.itemInput {
+
+  flex: auto;
+  margin-right: 1em;
+  background: #fdfdfd;
+  border-style: none;
+
+/*
+  font-size: ${props => props.size ? props.size : '1em'};
+  line-height: ${props => props.size ? props.size + props.size / 2 : '1.5em'};
+*/
+
+  font-size: 1em;
+  line-height: 1.5em;
+
+}

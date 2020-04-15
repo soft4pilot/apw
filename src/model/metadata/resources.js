@@ -12,7 +12,7 @@ const resources = [
     byname: 'Inicio',
     access: 0,
     summary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tincidunt hendrerit imperdiet. Phasellus eget nulla vel nisi laoreet faucibus quis id neque.',
-    route: '/',
+    route: '/'
   },{
     id: 'page',
     name: 'Página interna',

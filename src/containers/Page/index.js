@@ -21,7 +21,7 @@ const Page = props => {
   }, []);
 
   return (
-      <main className='page'>
+      <main className={style.page}>
         <Title>Lista de elementos</Title>
         <List items={props.items} addItem={props.createItem} updateItem={props.updateItem} deleteItem={props.deleteItem}/>
       </main>

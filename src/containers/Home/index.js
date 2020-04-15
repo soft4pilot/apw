@@ -15,7 +15,7 @@ const Home = props => {
 
   // Estructura
   return (
-      <main className='home'>
+      <main className={style.home}>
         <Product />
       </main>
   );

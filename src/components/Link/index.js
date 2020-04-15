@@ -13,7 +13,7 @@ const Link = props => {
   ].join(' ');
 
   return (
-    <RouterLink className={className}>{props.children}</RouterLink>
+    <RouterLink to={props.to} className={className}>{props.children}</RouterLink>
   );
 
 }

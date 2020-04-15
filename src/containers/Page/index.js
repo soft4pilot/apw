@@ -2,18 +2,14 @@
 // Interfaces - Page
 
 import React, { useEffect } from 'react';
-import Styled from 'styled-components';
-
 import { connect } from 'react-redux';
+import { createItem, readItems, updateItem, deleteItem } from '../../model/data/items';
 
-import { createItem, readItems, updateItem, deleteItem } from '../model/data/items';
+// Estilos del Componente
+import style from './style.module.css';
 
-import Title from '../components/Title'
-import List from '../components/List'
-
-const Container = Styled.main`
-  padding: 20px;
-`;
+import Title from '../../components/Title'
+import List from '../../components/List'
 
 const Page = props => {
 
@@ -25,10 +21,10 @@ const Page = props => {
   }, []);
 
   return (
-      <Container>
+      <main className='page'>
         <Title>Lista de elementos</Title>
         <List items={props.items} addItem={props.createItem} updateItem={props.updateItem} deleteItem={props.deleteItem}/>
-      </Container>
+      </main>
   );
 }
 

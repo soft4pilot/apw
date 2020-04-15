@@ -7,6 +7,9 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
+// Estilo global
+import './style.css';
+
 // Modelo de datos
 import model from './model';
 
@@ -18,15 +21,11 @@ import Footer from './components/Footer';
 import Home from './containers/Home';
 import Page from './containers/Page';
 
-// Estilo global
-import GlobalStyle from './style';
-
 // Crear componente raíz
 const App = () => {
 
   return (
     <Provider store={model}>
-      <GlobalStyle />
       <Router>
         <Header/>
         <Switch>

@@ -3,23 +3,21 @@
 
 import React from 'react';
 import { connect } from 'react-redux';
-import Styled from 'styled-components';
+
+// Estilos del Componente
+import style from './style.module.css';
 
 // Componentes utilizados
-import Product from '../components/Product';
-
-const Container = Styled.main`
-  padding: 20px;
-`;
+import Product from '../../components/Product';
 
 // Interfaz exportada
 const Home = props => {
 
   // Estructura
   return (
-      <Container>
+      <main className='home'>
         <Product />
-      </Container>
+      </main>
   );
 }
 

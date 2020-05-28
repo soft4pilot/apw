@@ -8,7 +8,7 @@ import { connect } from 'react-redux';
 import style from './style.module.css';
 
 // Componentes utilizados
-import Product from '../../components/Product';
+import Hero from '../../components/Hero';
 
 // Interfaz exportada
 const Home = props => {
@@ -16,7 +16,7 @@ const Home = props => {
   // Estructura
   return (
       <main className={style.home}>
-        <Product />
+        <Hero />
       </main>
   );
 }

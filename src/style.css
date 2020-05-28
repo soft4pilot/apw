@@ -7,7 +7,7 @@
 
 * {
   /* Posición */
-  /* Recuadro */
+  /* Contenedor */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -18,11 +18,12 @@
 
 body {
   /* Posición */
-  /* Recuadro */
+  /* Contenedor */
+  line-height: 1.3;
   /* Color */
   background-color: #fefefe;
   /* Texto */
   font-family: 'Open Sans', sans-serif;
-  font-size: 12px;
+  font-size: 20px;
   /* Otros */
 }

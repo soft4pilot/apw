@@ -1,0 +1,37 @@
+.Hero {
+
+  /* Contenedor */
+  height: 720px;
+  padding: 220px 20px;
+  text-align: center;
+  /* Color */
+  color: #ffffff;
+  background: url(../../assets/background-10.jpg);
+  background-size: cover;
+
+}
+
+.Hero button {
+
+  margin: 50px;
+  padding: 20px 60px;
+
+  background: rgba(0, 0, 0, 0.4);
+  border: 2px solid #00A3FE;
+  box-sizing: border-box;
+  border-radius: 20px;
+
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 27px;
+  text-align: center;
+  text-transform: uppercase;
+
+  color: white;
+
+  outline: none;
+  cursor: pointer;
+
+}

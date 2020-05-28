@@ -1,10 +1,10 @@
 import React from 'react';
-import { Link as RouterLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 // Estilos del Componente
 import style from './style.module.css';
 
-const Link = props => {
+const Route = props => {
 
   const className = [
     style.link,
@@ -13,9 +13,9 @@ const Link = props => {
   ].join(' ');
 
   return (
-    <RouterLink to={props.to} className={className}>{props.children}</RouterLink>
+    <Link to={props.to} className={className}>{props.children}</Link>
   );
 
 }
 
-export default Link;
+export default Route;

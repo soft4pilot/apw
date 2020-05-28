@@ -1,6 +1,65 @@
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: #dedede;
+.Header {
+
+  /* Posición */
+  position: fixed;
+  z-index: 100;
+
+  /* Contenedor */
+  padding: 40px 0;
+  width: 100%;
+
+  /* Color */
+  /* Texto */
+  /* Otros */
+
 }
+
+.HeaderGroup {
+
+  /* Posición */
+  display: grid;
+  grid-template-columns: repeat(4,auto);
+
+  align-items: center;
+  justify-items: center;
+
+  /* Contenedor */
+  max-width: 800px;
+  margin: 10px auto;
+  /* Color */
+  /* Texto */
+  /* Otros */
+
+}
+
+ .Header a {
+
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 27px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  color: white;
+
+ }
+
+ @media (max-width: 640px) {
+
+   .Header a {
+
+     display: none;
+
+   }
+
+   .Header a:nth-child(1) {
+
+     display: inline;
+
+   }
+
+
+ }

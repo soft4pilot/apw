@@ -1,4 +1,8 @@
 .label {
-  font-size: 1em;
-  line-height: 1.5em;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 48px;
+  text-transform: uppercase;
 }

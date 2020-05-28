@@ -6,9 +6,9 @@
 
 // Modelo de datos
 const product = {
-  name: 'Producto',
-  version: '1.1',
-  summary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tincidunt hendrerit imperdiet. Phasellus eget nulla vel nisi laoreet faucibus quis id neque.',
+  name: 'APW 1.2',
+  version: '1.2',
+  summary: 'Arquitectura de Productos Web',
   author: {
     name: 'José Esteva',
     email: 'josesteva@soft4pilot.com.mx'

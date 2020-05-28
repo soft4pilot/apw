@@ -3,10 +3,10 @@ import React from 'react';
 // Estilos del Componente
 import style from './style.module.css';
 
-const Label = props => (
+const Text = props => (
 
-  <div className={style.label}>{props.children}</div>
+  <span className={style.text}>{props.children}</span>
 
 );
 
-export default Label;
+export default Text;

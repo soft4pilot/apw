@@ -1,21 +1,22 @@
 import React from 'react';
-
-// Componetes utilizados
-import Brand from '../Brand';
-import Menu from '../Menu';
+import { Link } from 'react-router-dom';
 
 // Estilos del Componente
-import style from './style.module.css';
+import Style from './style.module.css';
 
 // Componente exportado
 const Header = props => {
 
   // Estructura
   return (
-    <header className={style.header}>
-      <Brand />
-      <Menu />
-    </header>
+    <div className={Style.Header}>
+      <div className={Style.HeaderGroup}>
+        <Link to="/"><img src="http://placehold.it/60x60" /></Link>
+        <Link to="/page">Uno</Link>
+        <Link to="/page">Dos</Link>
+        <Link to="/page">Tres</Link>
+      </div>
+    </div>
   );
 
 }

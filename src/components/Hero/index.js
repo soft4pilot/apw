@@ -3,14 +3,14 @@ import { connect } from 'react-redux';
 
 // Componentes utilizados
 import Title from '../Title';
-import Subtitle from '../Subtitle';
-import Paragraph from '../Paragraph';
+import Label from '../Label';
+import Text from '../Text';
 
 // Estilos del Componente
-import style from './style.module.css';
+import Style from './style.module.css';
 
 // Componente exportado
-const Product = props => {
+const Hero = props => {
 
   // Propiedades
   const {
@@ -19,10 +19,11 @@ const Product = props => {
 
   // Estructura
   return (
-    <div className={style.product}>
-      <Title inline>{product.name}</Title>
-      <Subtitle inline>{product.version}</Subtitle>
-      <Paragraph>{product.summary}</Paragraph>
+    <div className={Style.Hero}>
+      <Title>{product.name}</Title>
+      <Text>{product.summary}</Text>
+      <Label>Versión {product.version}</Label>
+      <button>Descargar</button>
     </div>
   );
 
@@ -35,4 +36,4 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps)(Product);
+export default connect(mapStateToProps)(Hero);

@@ -1,6 +1,9 @@
 .title {
-  margin-right: 0.3em;
-  font-size: 2em;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 96px;
+  line-height: 132px;
 }
 
 .inline {

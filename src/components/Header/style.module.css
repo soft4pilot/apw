@@ -43,7 +43,18 @@
   text-decoration: none;
   text-transform: uppercase;
 
-  color: white;
+  color: #00a3fe;
+
+  transition: 0.5s;
+
+ }
+
+ .Header a:hover {
+
+   color: white;
+   text-decoration: underline;
+   transform: translateY(-3px);
+
 
  }
 

@@ -1,3 +1,90 @@
-.home {
+.Home {
   padding: 20px;
+}
+
+.Subjects h2 {
+
+  margin: 20px 40px;
+
+  font-weight: 700;
+  font-size: 72px;
+
+}
+
+.SubjectsList {
+
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 30px;
+
+  justify-items: centar;
+
+  margin: 40px;
+
+}
+
+.SubjectsList > div {
+
+  cursor: pointer;
+
+}
+
+@media (max-width: 1960px) {
+
+  .SubjectsList {
+
+    grid-template-columns: repeat(4, 1fr);
+
+  }
+
+}
+
+@media (max-width: 1430px) {
+
+  .Subjects h2 {
+
+    font-size: 64px;
+
+  }
+
+  .SubjectsList {
+
+    grid-template-columns: repeat(3, 1fr);
+
+  }
+
+}
+
+@media (max-width: 1092px) {
+
+  .Subjects h2 {
+
+    margin: 15px 30px;
+    font-size: 56px;
+
+  }
+
+  .SubjectsList {
+
+    grid-template-columns: repeat(2, 1fr);
+
+  }
+
+}
+
+@media (max-width: 900px) {
+
+  .Subjects h2 {
+
+    margin: 10px 20px;
+    font-size: 48px;
+
+  }
+
+  .SubjectsList {
+
+    grid-template-columns: 1fr;
+
+  }
+
 }

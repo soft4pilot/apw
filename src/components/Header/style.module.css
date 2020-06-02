@@ -34,7 +34,6 @@
 
  .Header a {
 
-  font-family: Open Sans;
   font-style: normal;
   font-weight: normal;
   font-size: 20px;
@@ -45,7 +44,7 @@
 
   color: #00a3fe;
 
-  transition: 0.5s;
+  transition: 0.8s;
 
  }
 
@@ -71,6 +70,5 @@
      display: inline;
 
    }
-
 
  }

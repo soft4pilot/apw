@@ -1,10 +1,11 @@
 .Hero {
 
+  display: block;
   position: relative; /* Convertir en contenedor (del SVG) */
 
   /* Contenedor */
-  height: 800px;
-  padding: 200px 20px;
+  height: 760px;
+  padding: 140px 20px;
   text-align: center;
   /* Color */
   color: #ffffff;
@@ -24,6 +25,33 @@
 
 }
 
+.Hero h1 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 96px;
+  line-height: 132px;
+}
+
+.Hero p {
+
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 48px;
+  line-height: 65px;
+
+}
+
+.Hero label {
+
+  display: block;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 48px;
+  text-transform: uppercase;
+}
+
 .Hero button {
 
   margin: 60px auto;
@@ -34,7 +62,6 @@
   box-sizing: border-box;
   border-radius: 20px;
 
-  font-family: Open Sans;
   font-style: normal;
   font-weight: normal;
   font-size: 20px;

@@ -2,7 +2,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 // Componentes utilizados
-import Title from '../Title';
 import Label from '../Label';
 import Text from '../Text';
 
@@ -21,9 +20,9 @@ const Hero = props => {
   return (
     <div className={Style.Hero}>
       <div className={Style.HeroContent}>
-        <Title>{product.name}</Title>
-        <Text>{product.summary}</Text>
-        <Label>Versión {product.version}</Label>
+        <h1>{product.name}</h1>
+        <p>{product.summary}</p>
+        <label>Versión {product.version}</label>
         <button>Descargar</button>
       </div>
       <svg width="100%" height="172" fill="none" xmlns="http://www.w3.org/2000/svg">

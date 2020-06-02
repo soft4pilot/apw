@@ -6,7 +6,7 @@
 
 // Modelo de datos
 const product = {
-  name: 'APW 1.2',
+  name: 'APW',
   version: '1.2',
   summary: 'Arquitectura de Productos Web',
   author: {

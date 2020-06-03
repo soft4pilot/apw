@@ -12,6 +12,8 @@ import Hero from '../../components/Hero';
 
 import Card from '../../components/Card';
 
+import Section from '../../components/Section';
+
 // Interfaz exportada
 const Home = props => {
 
@@ -38,6 +40,13 @@ const Home = props => {
           </div>
 
         </div>
+
+        <Section
+          image={require('../../assets/background-21.jpg')}
+          logo={require('../../assets/logo-react.png')}
+          title="APW utiliza ReactJS"
+          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque varius nibh nec varius maximus. Phasellus nec nisi libero. Sed nibh mi, pretium sed pellentesque sed, ullamcorper non tellus. Sed hendrerit nunc enim, vel accumsan ex ultricies ornare."
+        />
 
       </main>
   );

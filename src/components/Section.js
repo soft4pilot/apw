@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const TitleGroup2 = styled.div`
-  
-`;
+
+// Componentes utilizados
+import Ola from './Ola';
 
 const Container = styled.div`
 
@@ -26,8 +26,6 @@ const Logo = styled.img`
   margin: 0 auto;
   align-self: end;
 `;
-
-
 
 const TitleGroup = styled.div`
 
@@ -65,6 +63,7 @@ const Section = props => (
           <Title>{props.title}</Title>
           <Text>{props.text}</Text>
       </TitleGroup>
+      <Ola />
   </Container>
 );
 

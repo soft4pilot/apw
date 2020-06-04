@@ -1,6 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
+// Componentes utilizados
+import Ola from './Ola';
+
 const Container = styled.div`
 
   margin: 100px 0 0;
@@ -59,6 +62,7 @@ const Section = props => (
           <Title>{props.title}</Title>
           <Text>{props.text}</Text>
       </TitleGroup>
+      <Ola />
   </Container>
 );
 

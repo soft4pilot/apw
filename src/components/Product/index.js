@@ -1,5 +1,7 @@
 import React from 'react';
-import { connect } from 'react-redux';
+
+// Metadatos
+import metadata from '../../metadata.json';
 
 // Componentes utilizados
 import Title from '../Title';
@@ -10,29 +12,14 @@ import Paragraph from '../Paragraph';
 import style from './style.module.css';
 
 // Componente exportado
-const Product = props => {
+const Product = () => (
 
-  // Propiedades
-  const {
-    product
-  } = props;
+  <div className={style.product}>
+    <Title inline>{metadata.product.name}</Title>
+    <Subtitle inline>{metadata.product.version}</Subtitle>
+    <Paragraph>{metadata.product.summary}</Paragraph>
+  </div>
 
-  // Estructura
-  return (
-    <div className={style.product}>
-      <Title inline>{product.name}</Title>
-      <Subtitle inline>{product.version}</Subtitle>
-      <Paragraph>{product.summary}</Paragraph>
-    </div>
-  );
+);
 
-}
-
-// Metadatos utilizados
-const mapStateToProps = (state) => {
-  return {
-    product: state.product,
-  }
-}
-
-export default connect(mapStateToProps)(Product);
+export default Product;

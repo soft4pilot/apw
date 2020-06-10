@@ -2,7 +2,6 @@
 // Interfaces - Home
 
 import React from 'react';
-import { connect } from 'react-redux';
 
 // Estilos del Componente
 import style from './style.module.css';

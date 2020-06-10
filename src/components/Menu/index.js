@@ -1,40 +1,26 @@
 // Librerias
 import React from 'react';
-import { connect } from 'react-redux';
 
-// Componentes utilizados
+// Metadatos
+import metadata from '../../metadata.json';
+
+// Componentes
 import Command from '../Command';
 import Link from '../Link';
 
-// Estilos del Componente
+// Estilos
 import style from './style.module.css';
 import { search } from 'react-icons-kit/fa/search';
 
 // Componente exportado
-const Menu = props => {
+const Menu = () => (
 
-  // Propiedades
-  const {
-    resources,
-  } = props;
+  <nav className={style.menu}>
+    { metadata.resources.map((resource, i) => (
+      <Link key={i} to={resource.route}>{resource.byname}</Link>
+    ))}
+    <Command icon={search} action={() => alert('Ouch!')} />
+  </nav>
+);
 
-  // Estructura
-  return (
-    <nav className={style.menu}>
-      { resources.map((resource, i) => (
-        <Link key={i} to={resource.route}>{resource.byname}</Link>
-      ))}
-      <Command icon={search} action={() => alert('Ouch!')} />
-    </nav>
-  );
-
-}
-
-// Datos utilizados
-const mapStateToProps = model => {
-  return {
-    resources: model.resources,
-  }
-}
-
-export default connect(mapStateToProps)(Menu);
+export default Menu;

@@ -1,34 +1,19 @@
 import React from 'react';
-import { connect } from 'react-redux';
+
+// Metadatos
+import metadata from '../../metadata.json';
 
 // Componentes utilizados
 import Email from '../Email';
 
-// Estilos del Componente
+// Estilos
 import style from './style.module.css';
 
 // Componente exportado
-const Footer = props => {
+const Footer = () => (
+  <footer className={style.footer}>
+    <Email href="mailto:{metadata.company.email}">{metadata.company.email}</Email>
+  </footer>
+);
 
-  // Propiedades
-  const {
-    company,
-  } = props;
-
-  // Estructura
-  return (
-    <footer className={style.footer}>
-      <Email href="mailto:{company.email}">{company.email}</Email>
-    </footer>
-  );
-
-}
-
-// Datos utilizados
-const mapStateToProps = (state) => {
-  return {
-    company: state.company
-  }
-}
-
-export default connect(mapStateToProps)(Footer);
+export default Footer;

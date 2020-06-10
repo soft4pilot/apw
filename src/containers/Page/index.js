@@ -2,7 +2,6 @@
 // Interfaces - Page
 
 import React, { useEffect, useState } from 'react';
-import { connect } from 'react-redux';
 import useData from '../../data';
 
 // Estilos del Componente
@@ -22,24 +21,5 @@ const Page = props => {
       </main>
   );
 }
-
-// // Obtener datos del modelo
-// const mapStateToProps = state => {
-//   return {
-//     items: state.items
-//   }
-// }
-//
-// // Obtener acciones del modelo
-// const mapDispatchToProps = {
-//
-//   createItem,
-//   readItems,
-//   updateItem,
-//   deleteItem
-//
-// };
-//
-// export default connect(mapStateToProps, mapDispatchToProps)(Page);
 
 export default Page;

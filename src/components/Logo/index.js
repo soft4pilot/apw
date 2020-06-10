@@ -1,18 +1,14 @@
 import React from 'react';
-import { connect } from 'react-redux';
 
-// Estilos del Componente
+// Metadatos
+import metadata from '../../metadata.json';
+
+// Estilos
 import style from './style.module.css';
 
-const Logo = props => (
-  <img className={style.logo} src={props.logo} />
+// Componente
+const Logo = () => (
+  <img className={style.logo} src={metadata.company.logo} />
 );
 
-// Obtener datos del modelo
-const mapStateToProps = state => {
-  return {
-    logo: state.company.logo
-  }
-}
-
-export default connect(mapStateToProps)(Logo);
+export default Logo;

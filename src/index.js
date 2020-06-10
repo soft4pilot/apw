@@ -4,14 +4,10 @@
 // Libreías
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 // Estilo global
 import './style.css';
-
-// Modelo de datos
-import model from './model';
 
 // Componentes utilizados
 import Header from './components/Header';
@@ -22,22 +18,16 @@ import Home from './containers/Home';
 import Page from './containers/Page';
 
 // Crear componente raíz
-const App = () => {
-
-  return (
-    <Provider store={model}>
-      <Router>
-        <Header/>
-        <Switch>
-          <Route path="/page" component={Page}/>
-          <Route path="/" component={Home}/>
-        </Switch>
-        <Footer/>
-      </Router>
-    </Provider>
-  );
-
-}
+const App = () => (
+    <Router>
+      <Header/>
+      <Switch>
+        <Route path="/page" component={Page}/>
+        <Route path="/" component={Home}/>
+      </Switch>
+      <Footer/>
+    </Router>
+);
 
 // Desplegar aplicación principal
 ReactDOM.render(<App />, document.getElementById('root'));

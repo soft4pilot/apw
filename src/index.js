@@ -14,8 +14,8 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 
 // Recursos disponibles
-import Home from './containers/Home';
-import Page from './containers/Page';
+import Home from './interfaces/Home';
+import Page from './interfaces/Page';
 
 // Crear componente raíz
 const App = () => (

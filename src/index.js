@@ -6,8 +6,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-// Estilo global
-import './style.css';
+// Estilos globales
+import GlobalStyles from './styles.js';
 
 // Componentes utilizados
 import Header from './components/Header';
@@ -20,6 +20,7 @@ import Page from './interfaces/Page';
 // Crear componente raíz
 const App = () => (
     <Router>
+      <GlobalStyles/>
       <Header/>
       <Switch>
         <Route path="/page" component={Page}/>

@@ -6,9 +6,9 @@
     "email": "contacto@empresa.com.mx"
   },
   "product": {
-    "name": "Producto",
-    "version": "1.1",
-    "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tincidunt hendrerit imperdiet. Phasellus eget nulla vel nisi laoreet faucibus quis id neque.",
+    "name": "APW",
+    "version": "1.3",
+    "summary": "Arquitectura de Productos Web",
     "author": {
       "name": "José Esteva",
       "email": "josesteva@soft4pilot.com.mx"
@@ -17,23 +17,32 @@
       "type": "MIT",
       "url": "",
       "copyright": "&copy; 2019 soft4pilot.com.mx"
-    }
+    },
+    "repository":""
   },
   "resources": [
     {
-      "id": "home",
-      "name": "Página principal",
-      "byname": "Inicio",
-      "access": 0,
+      "id": "page",
+      "name": "Características",
+      "byname": "Características",
+      "access": 1,
       "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tincidunt hendrerit imperdiet. Phasellus eget nulla vel nisi laoreet faucibus quis id neque.",
-      "route": "/"
+      "route": "/page"
     },{
       "id": "page",
-      "name": "Página interna",
-      "byname": "Página",
+      "name": "Arquitectura",
+      "byname": "Arquitectura",
+      "access": 1,
+      "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tincidunt hendrerit imperdiet. Phasellus eget nulla vel nisi laoreet faucibus quis id neque.",
+      "route": "/page"
+    },{
+      "id": "page",
+      "name": "Tecnología",
+      "byname": "Tecnología",
       "access": 1,
       "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tincidunt hendrerit imperdiet. Phasellus eget nulla vel nisi laoreet faucibus quis id neque.",
       "route": "/page"
     }
+
   ]
 }

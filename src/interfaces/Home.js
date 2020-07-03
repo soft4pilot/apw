@@ -9,7 +9,7 @@ import Product from '../components/Product';
 
 // Estilos
 const Container = styled.main`
-  padding: 20px;
+  
 `;
 
 // Componente

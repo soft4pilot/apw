@@ -3,9 +3,11 @@ import styled from 'styled-components';
 
 // Estilos
 const Container = styled.h2`
-  margin-right: 0.3em;
-  font-size: 2em;
-  display: ${props => props.inline ? 'inline' : 'block'};
+
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 49px;
+
 `;
 
 // Componente

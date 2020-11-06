@@ -9,6 +9,8 @@ import metadata from '../model/metadata.json';
 // import Subtitle from './Subtitle';
 // import Paragraph from './Paragraph';
 
+import { Button } from '@soft4pilot/sdb';
+
 // Recursos
 import background from '../assets/background_2.jpg';
 
@@ -60,13 +62,14 @@ const Summary = styled.p`
   color: #D0D7EE;
 `;
 
-const Repository = styled.button`
+const Repository = styled(Button)`
 
-  margin-top: 72px;
+  margin: 72px auto 0;
   padding: 12px 20px;
 
-  /* font-family: Nunito;
-  font-style: normal; */
+  /*
+  font-family: Nunito;
+  font-style: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 20px;
@@ -83,6 +86,7 @@ const Repository = styled.button`
   border-radius: 10px;
 
   outline: none;
+  */
 
 `;
 

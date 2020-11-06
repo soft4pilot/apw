@@ -12,7 +12,7 @@
 /build
 
 # misc
-.DS_Store
+#.env <-- No hay ningún peligro, el TOKEN es sólo para instalar paquetes!
 .env.local
 .env.development.local
 .env.test.local

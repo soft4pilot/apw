@@ -3,7 +3,6 @@
 # Crear un lanzamiento del producto
 # Tomado de https://www.learnstorybook.com/design-systems-for-developers
 
-## Crear un lanzamiento del SDB
 name: Release
 
 # Esta acción se ejecuta al mezclar una solicitud de extracción (pull request) con la rama principal (master)
@@ -11,36 +10,35 @@ on:
   push:
     branches: [master]
 
+
 jobs:
   release:
-
     runs-on: ubuntu-latest
     if: "!contains(github.event.head_commit.message, 'ci skip') && !contains(github.event.head_commit.message, 'skip ci')"
 
     steps:
       - uses: actions/checkout@v2
 
-      # - name: Preparar el repositorio
-      #   run: git fetch --unshallow --tags
-      #
-      # - name: Configurar el paquete para GitHub Packages
-      #   uses: actions/setup-node@v1
-      #   with:
-      #     node-version: 12.x
-      #
-      # - name: Almacenar en caché las dependencias
-      #   uses: actions/cache@v1
-      #   with:
-      #     path: node_modules
-      #     key: yarn-deps-${{ hashFiles('yarn.lock') }}
-      #     restore-keys: |
-      #       yarn-deps-${{ hashFiles('yarn.lock') }}
+      - name: Preparar el repositorio
+        run: git fetch --unshallow --tags
 
-      - name: Crear el lanzamiento
+      - name: Configurar el paquete para GitHub Packages
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+
+      - name: Almacenar en caché las dependencias
+        uses: actions/cache@v1
+        with:
+          path: node_modules
+          key: yarn-deps-${{ hashFiles('yarn.lock') }}
+          restore-keys: |
+            yarn-deps-${{ hashFiles('yarn.lock') }}
+
+      - name: Crear un lanzamiento del producto
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          # NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        # run: |
-        #   yarn install --frozen-lockfile
-        #   yarn build
-          run: npx auto release
+        run: |
+          yarn install --frozen-lockfile
+          yarn build
+          npx auto shipit

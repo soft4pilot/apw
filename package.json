@@ -1,7 +1,14 @@
 {
   "name": "@soft4pilot/apw",
   "version": "1.5.0",
+  "description": "Arquitectura de Productos Web",
+  "main": "build/index.html",
+  "files": [ "build" ],
+  "repository": "git://github.com/soft4pilot/apw.git",
+  "author": "José Esteva <josesteva@soft4pilot.com.mx>",
+  "license": "MIT",
   "private": true,
+  "homepage": "https://soft4pilot.github.io/apw",
   "dependencies": {
     "@soft4pilot/sdb": "0.0.1",
     "react": "^16.12.0",
@@ -13,10 +20,10 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "storybook": "start-storybook -p 6006 -s public --no-dll",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "storybook": "start-storybook -p 6006 -s public --no-dll",
     "build-storybook": "build-storybook -s public --no-dll"
   },
   "eslintConfig": {

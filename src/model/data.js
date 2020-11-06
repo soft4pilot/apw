@@ -22,7 +22,7 @@ const useData = (collection) => {
       setUpdate(false);
     });
 
-  }, [update]);
+  }, [update]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // Agregar un elemento a la colección
   const createItem = data => {

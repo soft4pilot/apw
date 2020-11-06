@@ -1,0 +1,34 @@
+# SDB 1.0
+# Integración continua
+# Publicar la guía de estilos (storybook)
+# Tomado de https://dev.to/kouts/deploy-storybook-to-github-pages-3bij
+
+name: Build and Deploy
+on:
+  push:
+    branches: [master]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    if: "!contains(github.event.head_commit.message, 'ci skip') && !contains(github.event.head_commit.message, 'skip ci')"
+
+    steps:
+      - name: Obtener la última versión del código fuente
+        uses: actions/checkout@v2.3.1
+        with:
+          persist-credentials: false
+
+      - name: Contruir la prueba de concepto
+        run: |
+          npm install
+          npm run build
+
+      - name: Publicar la prueba de concepto
+        uses: JamesIves/github-pages-deploy-action@3.6.2
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: master
+          FOLDER: build
+          CLEAN: true
+          TARGET_FOLDER: docs

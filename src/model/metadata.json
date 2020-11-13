@@ -43,8 +43,5 @@
       "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tincidunt hendrerit imperdiet. Phasellus eget nulla vel nisi laoreet faucibus quis id neque.",
       "route": "/page"
     }
-  ],
-  "api": {
-    "url": "http://132.248.31.70:3000/pruebas/gql"
-  }
+  ]
 }

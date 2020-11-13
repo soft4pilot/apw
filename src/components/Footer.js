@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
 
 // Metadatos
-import metadata from '../model/metadata.json';
+//import metadata from '../model/metadata.json';
+import { Metadata } from '../model/metadata';
 
 // Componentes utilizados
 import Email from './Email';
@@ -17,10 +18,16 @@ const Container = styled.footer`
 `;
 
 // Componente exportado
-const Footer = () => (
-  <Container>
-    <Email href="mailto:{metadata.company.email}">{metadata.company.email}</Email>
-  </Container>
-);
+const Footer = () => {
+
+  const [{company}] = useContext(Metadata);
+
+  return (
+    <Container>
+      <Email href="mailto:{company.email}">{company.email}</Email>
+    </Container>
+  );
+
+}
 
 export default Footer;

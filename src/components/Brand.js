@@ -1,9 +1,10 @@
 // Librerias
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
 
 // Metadatos
-import metadata from '../model/metadata.json';
+//import metadata from '../model/metadata.json'; // NOTA: Ya no se utilizará esta técnica
+import { Metadata } from '../model/metadata';
 
 // Dependencias
 import Logo from './Logo';
@@ -18,9 +19,11 @@ const Container = styled.div`
 // Componente exportado
 const Brand = () => (
 
+  const [{company}] = useContext(Metadata);
+
   <Container>
     <Logo />
-    <Title size='2em'>{metadata.company.name}</Title>
+    <Title size='2em'>{company.name}</Title>
   </Container>
 );
 

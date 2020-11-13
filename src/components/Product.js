@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
 
 // Metadatos
-import metadata from '../model/metadata.json';
+//import metadata from '../model/metadata.json';
+import { Metadata } from '../model/metadata';
 
 // Componentes utilizados
 // import Title from './Title';
@@ -91,17 +92,20 @@ const Repository = styled(Button)`
 `;
 
 // Componente exportado
-const Product = () => (
+const Product = () => {
 
-  <Container>
-    <Name inline>
-      {metadata.product.name}
-      <Version inline>{metadata.product.version}</Version>
-    </Name>
-    <Summary>{metadata.product.summary}</Summary>
-    <Repository>Descargar</Repository>
-  </Container>
+  const [{product}] = useContext(Metadata);
 
-);
+  return (
+    <Container>
+      <Name inline>
+        {product.name}
+        <Version inline>{product.version}</Version>
+      </Name>
+      <Summary>{product.summary}</Summary>
+      <Repository>Descargar</Repository>
+    </Container>
+  );
+}
 
 export default Product;

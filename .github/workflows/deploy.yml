@@ -22,7 +22,7 @@ jobs:
       - name: Contruir la prueba de concepto
         run: |
           npm install
-          npm run build
+          CI= npm run build
 
       - name: Publicar la prueba de concepto
         uses: JamesIves/github-pages-deploy-action@3.6.2

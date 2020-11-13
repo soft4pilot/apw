@@ -1,10 +1,11 @@
 // Librerias
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 // Metadatos
-import metadata from '../model/metadata.json';
+//import metadata from '../model/metadata.json';
+import { Metadata } from '../model/metadata';
 
 // Dependencias
 // import Command from './Command';
@@ -34,17 +35,22 @@ const Item = styled.li`
 `;
 
 // Componente
-const Menu = () => (
+const Menu = () => {
 
-  <Container>
-    <ul>
-      { metadata.resources.map((resource, i) => (
-        <Item key={i}>
-          <Link to={resource.route}>{resource.byname}</Link>
-        </Item>
-      ))}
-    </ul>
-  </Container>
-);
+  const [{resources}] = useContext(Metadata);
+
+  return (
+    <Container>
+      <ul>
+        { resources.map((resource, i) => (
+          <Item key={i}>
+            <Link to={resource.route}>{resource.byname}</Link>
+          </Item>
+        ))}
+      </ul>
+    </Container>
+  );
+
+}
 
 export default Menu;

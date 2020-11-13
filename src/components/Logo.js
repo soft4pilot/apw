@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
 
 // Metadatos
-import metadata from '../model/metadata.json';
+//import metadata from '../model/metadata.json';
+import { Metadata } from '../model/metadata';
 
 // Estilos
 const Container = styled.img`
@@ -12,8 +13,14 @@ const Container = styled.img`
 `;
 
 // Componente
-const Logo = () => (
-  <Container src={metadata.company.logo} />
-);
+const Logo = () => {
+
+  const [{company}] = useContext(Metadata);
+
+  return (
+    <Container src={company.logo} />
+  );
+  
+}
 
 export default Logo;

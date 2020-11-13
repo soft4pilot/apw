@@ -4,24 +4,46 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import useData from '../model/data';
+import useQuery from '../model/queries';
 
 import Title from '../components/Title'
 import List from '../components/List'
+
 
 // Estilos
 const Container = styled.main`
   padding: 20px;
 `;
 
+// URL de la API
+const url = 'http://132.248.31.70:3000/pruebas/gql?access_token=cn9qw7o6ROGUFkltE7kEkI41';
+
+// Consulta de datos
+const query = `query {
+  items {
+    data {
+      id
+      text
+    }
+  }
+}`;
+
 const Page = props => {
 
-  const [items, createItem, , updateItem, deleteItem] = useData('items');
+
+
+  const [{loading, error, data}, setQuery] = useQuery(url, query);
+
+  if (loading) return 'Cargando...';
+  if (error) return '¡Ocurrió un error!';
 
   return (
       <Container>
-        <Title>Lista de elementos</Title>
-        <List items={items} addItem={createItem} updateItem={updateItem} deleteItem={deleteItem}/>
+        <Title>Página interna</Title>
+        {data && (
+          <List items={data && data.items.data} />
+
+        )}
       </Container>
   );
 }

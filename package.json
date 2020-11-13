@@ -3,7 +3,9 @@
   "version": "1.5.0",
   "description": "Arquitectura de Productos Web",
   "main": "build/index.html",
-  "files": [ "build" ],
+  "files": [
+    "build"
+  ],
   "repository": "git://github.com/soft4pilot/apw.git",
   "author": "José Esteva <josesteva@soft4pilot.com.mx>",
   "license": "MIT",

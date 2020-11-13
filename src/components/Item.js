@@ -42,11 +42,15 @@ const Item = props => {
   return(
     <Container>
       <input type="text" value={value} onChange={event => setValue(event.target.value)} />
+
+      { false && (
       <div>
         { dataChange && <Command icon={check} action={() => { dataChange(value); }} /> }
         { deleteRequest && <Command icon={remove} action={deleteRequest} /> }
         { dataInput && value && <Command icon={check} action={() => { dataInput(value); setValue('')}} /> }
       </div>
+      )}
+
     </Container>
   );
 

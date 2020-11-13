@@ -13,10 +13,13 @@ const Container = styled.ul`
 // Componente
 const List = props => {
 
+  console.log(props.items);
+
   // Estructura del componente
   return (
     <Container>
-      { props.items.map(item => (
+      {
+        props.items.map(item => (
         <Item key={item.id} value={item.text} dataChange={value => props.updateItem(item.id, {text: value})} deleteRequest={() => props.deleteItem(item.id)} />
         ))
       }

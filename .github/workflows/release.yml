@@ -27,10 +27,18 @@ jobs:
         with:
           node-version: 12.x
 
+      - name: Almacenar en caché las dependencias
+        uses: actions/cache@v1
+        with:
+          path: node_modules
+          key: yarn-deps-${{ hashFiles('yarn.lock') }}
+          restore-keys: |
+            yarn-deps-${{ hashFiles('yarn.lock') }}    
+
       - name: Crear un lanzamiento del producto
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          npm install
-          CI= npm run build
-          npx auto shipit
+          --frozen-lockfile
+          CI= yarn build
+          yarn auto shipit

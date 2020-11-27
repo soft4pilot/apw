@@ -19,10 +19,18 @@ jobs:
         with:
           persist-credentials: false
 
+      - name: Almacenar en caché las dependencias
+        uses: actions/cache@v1
+        with:
+          path: node_modules
+          key: yarn-deps-${{ hashFiles('yarn.lock') }}
+          restore-keys: |
+            yarn-deps-${{ hashFiles('yarn.lock') }}
+
       - name: Contruir la prueba de concepto
         run: |
-          npm install
-          CI= npm run build
+          yarn
+          CI= yarn build
 
       - name: Publicar la prueba de concepto
         uses: JamesIves/github-pages-deploy-action@3.6.2

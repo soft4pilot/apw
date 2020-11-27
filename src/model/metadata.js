@@ -28,28 +28,24 @@ export const MetadataProvider = props => {
     },
     resources: [
       {
-        id: 'page',
-        name: 'Características',
-        byname: 'Características',
-        access: 1,
+        label: 'Visión',
         summary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tincidunt hendrerit imperdiet. Phasellus eget nulla vel nisi laoreet faucibus quis id neque.',
-        route: '/page'
+        url: '#vision'
       },
       {
-        id: 'page',
-        name: 'Arquitectura',
-        byname: 'Arquitectura',
-        access: 1,
+        label: 'Características',
         summary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tincidunt hendrerit imperdiet. Phasellus eget nulla vel nisi laoreet faucibus quis id neque.',
-        route: '/page'
+        url: '#features'
       },
       {
-        id: 'page',
-        name: 'Tecnología',
-        byname: 'Tecnología',
-        access: 1,
+        label: 'Diseño',
         summary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tincidunt hendrerit imperdiet. Phasellus eget nulla vel nisi laoreet faucibus quis id neque.',
-        route: '/page'
+        url: '#design'
+      },
+      {
+        label: 'Tecnología',
+        summary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tincidunt hendrerit imperdiet. Phasellus eget nulla vel nisi laoreet faucibus quis id neque.',
+        url: '#technology'
       }
     ]
   });

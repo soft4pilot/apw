@@ -3,7 +3,9 @@
 
 import React from 'react';
 import DocsTheme from './theme';
-import { Theme } from '@soft4pilot/sdb';
+import { Style } from '@soft4pilot/sdb';
+
+import { MetadataProvider } from 'model/metadata';
 
 // Parámetros
 export const parameters = {
@@ -17,9 +19,11 @@ export const parameters = {
 export const decorators = [
   Story => (
     <>
-      <Theme>
-        <Story />
-      </Theme>
+      <MetadataProvider>
+        <Style>
+          <Story />
+        </Style>
+      </MetadataProvider>
     </>
   ),
 ];

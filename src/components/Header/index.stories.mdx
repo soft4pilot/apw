@@ -1,0 +1,27 @@
+<!--
+APW 1.5
+Encabezado (Header)
+-->
+
+import { ArgsTable, Description, Meta, Story } from '@storybook/addon-docs/blocks';
+import Header from './index';
+
+<Meta title="Componentes/Header" component={Header} />
+
+export const Items = [
+  {label: 'Enlace', url: '#'},
+  {label: 'Enlace', url: '#'},
+  {label: 'Enlace', url: '#'},
+  {label: 'Enlace', url: '#'},
+  {label: 'Enlace', url: '#'}
+];
+
+## Menú (Menu)
+
+<Description of={Menu} />
+
+<ArgsTable of={Menu} />
+
+<Story name="Home">
+  <Header />
+</Story>

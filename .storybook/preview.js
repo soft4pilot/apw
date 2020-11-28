@@ -3,7 +3,7 @@
 
 import React from 'react';
 import DocsTheme from './theme';
-import { Style } from '@soft4pilot/sdb';
+import { StyleProvider } from '@soft4pilot/sdb';
 
 import { MetadataProvider } from 'model/metadata';
 
@@ -20,9 +20,9 @@ export const decorators = [
   Story => (
     <>
       <MetadataProvider>
-        <Style>
+        <StyleProvider>
           <Story />
-        </Style>
+        </StyleProvider>
       </MetadataProvider>
     </>
   ),

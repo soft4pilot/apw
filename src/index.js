@@ -9,7 +9,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { MetadataProvider } from './model/metadata';
 
 // Variables de diseño (Tokens)
-import { Style } from '@soft4pilot/sdb'; // NOTA: Se utilizará esta técnica!
+import { StyleProvider } from '@soft4pilot/sdb'; // NOTA: Se utilizará esta técnica!
 
 // Componentes utilizados
 import Header from './components/Header';
@@ -23,13 +23,13 @@ const App = () => (
 
   <MetadataProvider>
     <Router>
-      <Style>
+      <StyleProvider>
         <Header/>
         <Switch>
           <Route path="/" component={Home}/>
         </Switch>
         <Footer/>
-      </Style>
+      </StyleProvider>
     </Router>
   </MetadataProvider>
 );

@@ -38,16 +38,6 @@ const StyledLogo = Styled(Logo)`
 
 `;
 
-// TEMPORAL: Cambiar el color de los elementos del menú. Sin embargo, estos estilos vendrán del tema "Dark" del sistema de diseño.
-
-const StyledMenu = Styled(Menu)`
-
-  a, a:hover {
-    color: white;
-  }
-
-`;
-
 // Componente exportado
 const Header = props => {
 
@@ -57,7 +47,7 @@ const Header = props => {
   return (
     <Container>
       <StyledLogo />
-      <StyledMenu items={resources} />
+      <Menu items={resources} inverted />
     </Container>
   );
 

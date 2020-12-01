@@ -6,10 +6,9 @@ export const MetadataProvider = props => {
 
   const [metadata, setMetadata] = useState({
     company: {
-      name: 'Empresa',
-      slogan: 'Lema de la empresa',
-      logo: 'http://placehold.it/50x50',
-      email: 'contacto@empresa.com.mx'
+      name: 'Soft4pilot',
+      slogan: 'Conocimiento, información y datos aeronáuticos',
+      email: 'josesteva@soft4pilot.com.mx'
     },
     product: {
       name: 'APW',

@@ -62,7 +62,7 @@ const Feature = props => {
   return (
     <Container>
       <Icon name={props.icon} size={theme.space.xl} color={theme.color.primary.dark}/>
-      <Text>{props.text}</Text>
+      <Text>{props.title}</Text>
     </Container>
   )
 
@@ -71,11 +71,13 @@ const Feature = props => {
 // Parámetros
 Feature.propTypes = {
   icon: PropTypes.string,
+  title: PropTypes.string
 }
 
 // Valores predeterminados
 Feature.defaultProps = {
   icon: 'circle',
+  title: 'Descripción'
 }
 
 export default Feature;

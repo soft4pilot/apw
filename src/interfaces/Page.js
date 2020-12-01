@@ -10,11 +10,6 @@ import Title from '../components/Title'
 import List from '../components/List'
 
 
-// Estilos
-const Container = styled.main`
-  padding: 20px;
-`;
-
 // URL de la API
 const url = 'http://132.248.31.70:3000/pruebas/gql?access_token=cn9qw7o6ROGUFkltE7kEkI41';
 
@@ -27,6 +22,11 @@ const query = `query {
     }
   }
 }`;
+
+// Estilos
+const Container = styled.main`
+  padding: 20px;
+`;
 
 const Page = props => {
 
@@ -42,7 +42,6 @@ const Page = props => {
         <Title>Página interna</Title>
         {data && (
           <List items={data && data.items.data} />
-
         )}
       </Container>
   );

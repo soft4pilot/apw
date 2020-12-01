@@ -5,7 +5,9 @@ Sección (Section)
 
 import { ArgsTable, Description, Meta, Story } from '@storybook/addon-docs/blocks';
 import { Text } from '@soft4pilot/sdb';
+
 import Section from './index';
+import Features from '../Features';
 
 <Meta title="Componentes/Sección" component={Section} />
 
@@ -15,14 +17,18 @@ import Section from './index';
 
 <ArgsTable of={Section} />
 
-<Story name="Base">
-  <Section heading="Titulo">
+<Story name="Texto">
+  <Section heading="Visión">
     <Text size="18px" align="justify">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-      ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-      laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-      voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-      non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      Para los desarrolladores de software que deben implementar rápida y eficientemente productos y servicios Web,
+      la Arquitectura de Poductos Web (APW 1.5) es una arquitectura de software de última generación que considera
+      los 3 aspectos fundamentales del software contemporáneo: Datos, Programas e Interfaces.
     </Text>
+  </Section>
+</Story>
+
+<Story name="Características">
+  <Section heading="Características">
+    <Features />
   </Section>
 </Story>

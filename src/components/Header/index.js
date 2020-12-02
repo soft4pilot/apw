@@ -18,7 +18,7 @@ const Container = Styled.header`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: ${props => props.theme.space.m} ${props => props.theme.space.m};
+  padding: ${props => props.theme.space.s} ${props => props.theme.space.ml};
 
   background: ${props => props.theme.color.primary.darker};
 

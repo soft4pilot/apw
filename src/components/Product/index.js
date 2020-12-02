@@ -33,7 +33,7 @@ const Product = props => {
 
   return (
     <Container>
-      <Text size={theme.font.size.display.large} color={theme.color.base.white} style={{lineHeight: '110%'}}>{product.name} <small style={{fontSize: '32px'}}>{product.version}</small></Text>
+      <Text size={theme.font.size.display.large} color={theme.color.base.white}>{product.name} <small style={{fontSize: '32px'}}>{product.version}</small></Text>
       <Text size={theme.font.size.display.medium} color={theme.color.base.white}>{product.summary}</Text>
     </Container>
   );

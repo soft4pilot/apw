@@ -2037,10 +2037,10 @@
     prop-types "^15.6.1"
     react-lifecycles-compat "^3.0.4"
 
-"@soft4pilot/sdb@0.0.10":
-  version "0.0.10"
-  resolved "https://npm.pkg.github.com/download/@soft4pilot/sdb/0.0.10/70b07c93d0b553b18fffd45e5058e22831dc866ad44f504ee28170faef7615a7#de4ee52f23dd2d383b366c2baf6736f0777c5dad"
-  integrity sha512-zcU1H2f/2JcrgvG40T5hadbzAU3aRcyiEB2kL7Q3sdq7DWKMdZISXp2R0dbzrPMBaHXJUYWxEVeTKCDQ4En7Yg==
+"@soft4pilot/sdb@0.0.12":
+  version "0.0.12"
+  resolved "https://npm.pkg.github.com/download/@soft4pilot/sdb/0.0.12/3778154ac668c43faeb1c982fc459dab6cfb4a8b5734ec3c4f14fa64956d6620#18cb564429819671fd1777de5b14f2faeaac3804"
+  integrity sha512-8iB2OGArbN25KIFIBvHGDk/FEU0HQdfkdktotFVMOAwvBXvKJTufImgPre8sm+wisBYxXmLf0vo6OmRI69zN6w==
   dependencies:
     prop-types "^15.7.2"
     react "^16.13.1"

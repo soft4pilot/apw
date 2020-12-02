@@ -12,7 +12,7 @@ export const MetadataProvider = props => {
     },
     product: {
       name: 'APW',
-      version: '1.3',
+      version: '1.5',
       summary: 'Arquitectura de Productos Web',
       author: {
         name: 'José Esteva',
@@ -23,7 +23,8 @@ export const MetadataProvider = props => {
         url: '',
         copyright: '&copy; 2019 soft4pilot.com.mx'
       },
-      repository: ''
+      code: 'https://github.com/soft4pilot/apw',
+      docs: 'https://docs.google.com/document/d/19Jq9MzhVcYHzrRAUoarB_Ia8hf9gH3YN_N9J714uIYE/edit?usp=sharing'
     },
     resources: [
       {

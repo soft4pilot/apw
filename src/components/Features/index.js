@@ -8,7 +8,7 @@ import Styled from 'styled-components';
 // Acceso al modelo de datos
 import useQuery from 'model/queries';
 
-import Feature from '../Feature';
+import { Figure } from '@soft4pilot/sdb';
 
 // URL de la API
 const url = 'https://api-us-west-2.graphcms.com/v2/ckhbgkjs3afpk01z7dnqocy9j/master'; // TEMPORAL: La URL de la API debe estar en el contexto de la aplicación
@@ -49,7 +49,7 @@ const Features = props => {
     <Container>
       { data && (data.features.map((feature, i) => (
         <Content>
-          <Feature key={i} icon={feature.icon} title={feature.title} />
+          <Figure key={i} icon={feature.icon} title={feature.title} />
         </Content>
       )))}
     </Container>

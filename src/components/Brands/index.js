@@ -24,7 +24,7 @@ const Container = Styled.div`
 
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: space-between;
   padding: 0px;
 
 `;
@@ -32,9 +32,8 @@ const Container = Styled.div`
 const Content = Styled.span`
 
   flex: none;
-  order: 1;
   flex-grow: 0;
-  margin: 0px 16px; /* Utilizar variable de diseño */
+  margin: 0px 32px; /* Utilizar variable de diseño */
 
 `;
 
@@ -49,7 +48,7 @@ const Brands = props => {
     <Container>
       { data && (data.technologies.map((technology, i) => (
         <Content>
-          <Brand icon="circle" size='80px' color={theme.color.primary.lighter}  href={technology.url} />
+          <Brand logo={technology.icon} url={technology.url} size='80px' color={theme.color.primary.lighter} />
         </Content>
       )))}
     </Container>

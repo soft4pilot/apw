@@ -1,0 +1,21 @@
+<!--
+APW 1.5
+Producto (Product)
+-->
+
+import { ArgsTable, Description, Meta, Story } from '@storybook/addon-docs/blocks';
+import Product from './index';
+
+<Meta title="Componentes/Producto" component={Product} />
+
+## Producto (Product)
+
+<Description of={Product} />
+
+<ArgsTable of={Product} />
+
+<Story name="Base">
+  <div style={{background:'#001a33', padding:'64px'}}>
+    <Product />
+  </div>
+</Story>

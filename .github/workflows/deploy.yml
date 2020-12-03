@@ -19,14 +19,6 @@ jobs:
         with:
           persist-credentials: false
 
-      - name: Almacenar en caché las dependencias
-        uses: actions/cache@v1
-        with:
-          path: node_modules
-          key: yarn-deps-${{ hashFiles('yarn.lock') }}
-          restore-keys: |
-            yarn-deps-${{ hashFiles('yarn.lock') }}
-
       - name: Contruir la prueba de concepto
         run: |
           yarn
@@ -36,7 +28,6 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@3.6.2
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: master
+          BRANCH: gh-pages
           FOLDER: build
           CLEAN: true
-          TARGET_FOLDER: docs

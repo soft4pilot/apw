@@ -31,6 +31,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          yarn --frozen-lockfile
+          yarn
           CI= yarn build
           yarn auto shipit --no-changelog --only-publish-with-release-label

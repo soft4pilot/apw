@@ -13,9 +13,9 @@ import { StyleProvider } from '@soft4pilot/sdb'; // NOTA: Se utilizará esta té
 
 // Componentes utilizados
 import Header from './components/Header';
-// import Footer from './components/Footer';
+import Footer from './components/Footer';
 
-// Recursos disponibles
+// Interfaces disponibles
 import Home from './interfaces/Home';
 
 // Crear componente raíz

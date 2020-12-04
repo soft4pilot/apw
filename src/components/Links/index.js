@@ -28,14 +28,6 @@ const Links = props => {
 
   const [{product}] = React.useContext(Metadata);
 
-  const navigateTo = (url) => {
-
-    ;
-
-  }
-
-  console.log()
-
   return (
     <Container>
       <Button onClick={e => window.open(product.code,'_blank')}>Repositorio</Button>

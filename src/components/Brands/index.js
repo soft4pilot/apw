@@ -48,7 +48,7 @@ const Brands = props => {
     <Container>
       { data && (data.technologies.map((technology, i) => (
         <Content>
-          <Brand logo={technology.icon} url={technology.url} size='80px' color={theme.color.primary.lighter} />
+          <Brand key={i} logo={technology.icon} url={technology.url} size='80px' color={theme.color.primary.lighter} />
         </Content>
       )))}
     </Container>

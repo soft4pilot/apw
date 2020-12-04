@@ -7,6 +7,7 @@
 import React from 'react';
 import Styled, { ThemeContext } from 'styled-components';
 
+import { Heading } from '@soft4pilot/sdb';
 import { Text } from '@soft4pilot/sdb';
 
 import { Metadata } from 'model/metadata';
@@ -21,6 +22,12 @@ const Container = Styled.div`
 
   margin-bottom: ${props => props.theme.space.ml};
 
+  /* Solución temporal: Corregir el componente Heading */
+  & > h1 {
+    margin: 0;
+    line-height: 100%;
+  }
+
 `;
 
 // Componente
@@ -33,7 +40,7 @@ const Product = props => {
 
   return (
     <Container>
-      <Text size={theme.font.size.display.large} color={theme.color.base.white}>{product.name} <small style={{fontSize: '32px'}}>{product.version}</small></Text>
+      <Heading level={1} size={theme.font.size.display.large} color={theme.color.base.white}>{product.name} <small>{product.version}</small></Heading>
       <Text size={theme.font.size.display.medium} color={theme.color.base.white}>{product.summary}</Text>
     </Container>
   );

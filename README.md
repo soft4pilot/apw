@@ -1,22 +1,14 @@
-Soft4pilot
-
-**APW 1.5**
-
-Descripción de la arquitectura
-
-*José Esteva, 9 de diciembre de 2020.*
-
 # PRESENTACIÓN
 
 La **Arquitectura de Productos Web versión 1.5** o simplemente **APW 1.5** es una arquitectura de software de última generación que abarca los 3 elementos fundamentales del software contemporáneo. (NOTE:  Datos, programas e interfaces.) A partir de ella pueden construirse productos Web estructurados, eficientes y escalables.
-
-![image alt text](image_0.jpg)
 
 Para describir la arquitectura utilizaré el modelo **C4** (NOTE:  https://c4model.com) de Simon Brown, integrado por 4 vistas jerárquicas que permiten describir de manera sencilla y precisa la estructura de un producto de software.
 
 # CONTEXTO
 
-La arquitectura está constituida por 3 sistemas independientes que proporcionan funcionalidad, datos y componentes reutilizables. Para crear y mantener cada uno de estos sistemas se requiere un *Diseñador* *gráfico*, un *Programador* *Web* y un *Creador* *de contenido*. 
+La arquitectura está constituida por 3 sistemas independientes que proporcionan funcionalidad, datos y componentes reutilizables. Para crear y mantener cada uno de estos sistemas se requiere un *Diseñador* *gráfico*, un *Programador* *Web* y un *Creador* *de contenido*.
+
+![image alt Contexto](images/C1.png)
 
 **Figura 1.** Contexto del producto Web.
 
@@ -63,7 +55,7 @@ La información que gestiona el producto se almacena en un gestor de *contenido*
 </table>
 
 
-**Tabla 1.** Participantes en el contexto del *producto*. 
+**Tabla 1.** Participantes en el contexto del *producto*.
 
 Finalmente, el sistema de diseño permite desarrollar de forma independientemente los componentes que utiliza la interfaz gráfica y distribuirlos a los *productos* a través de un gestor de paquetes.
 
@@ -73,7 +65,7 @@ Finalmente, el sistema de diseño permite desarrollar de forma independientement
 
 Todos los productos Web se basan en un patrón arquitectónico llamado **Cliente-Servidor** donde el *cliente* realiza solicitudes y el *servidor* emite respuestas.
 
-![image alt text](image_1.png)
+![image alt Contenedores](images/C2-1.png)
 
 **Figura 2.** Contenedores utilizados por el *producto*.
 
@@ -102,12 +94,13 @@ Para realizar peticiones al *servidor* el usuario utiliza un navegador Web que d
   </tr>
 </table>
 
-
 **Tabla 2.** Descripción de los contenedores del *producto* Web.
 
 ## Sistema: Contenido
 
 La información que proporciona el producto se almacena en un sistema de gestión de *contenido* acéfalo compuesto por 3 contenedores: Un *repositorio* donde se almacena el contenido, una interfaz programática para acceder al contenido y un *editor* para administrar el contenido.
+
+![image alt Contenedores](images/C2-2.png)
 
 **Figura 3.** Contenedores utilizados por el gestor de *contenido*.
 
@@ -143,15 +136,15 @@ Aunque es posible implementar un gestor de contenido propio, posiblemente es una
 
 ## Contenedor: Cliente
 
-El *cliente* está organizado en una estructura jerárquica compuesta por una *aplicación* principal y un conjunto de *contenedores* creados a partir de *componentes *reutilizables. 
+El *cliente* está organizado en una estructura jerárquica compuesta por una *aplicación* principal y un conjunto de *contenedores* creados a partir de *componentes *reutilizables.
 
-![image alt text](image_2.png)
+![image alt Componentes](images/C3.png)
 
  **Figura 4.** Componentes que constituyen un *cliente*.
 
 Adicionalmente, se incluyen un *adaptador* para acceder al gestor de *contenido* y un repositorio de *metadatos* para mantener el estado de la aplicación.
 
-La *aplicación* principal contiene rutas a las diferentes interfaces del producto. Cada interfaz muestra la información de un tema específico. Por ejemplo, las páginas que conforman un sitio Web son consideradas *interfaces* por la arquitectura. 
+La *aplicación* principal contiene rutas a las diferentes interfaces del producto. Cada interfaz muestra la información de un tema específico. Por ejemplo, las páginas que conforman un sitio Web son consideradas *interfaces* por la arquitectura.
 
 <table>
   <tr>
@@ -194,4 +187,3 @@ Los *contenedores* agrupan *componentes* interactivos que pueden ser operados di
 Para acceder al gestor de contenido se utiliza un componente *adaptador*. Aunque cualquier componente puede utilizar este *adaptador* se recomienda hacerlo desde los *contenedores* y luego difundir los resultados a los *componentes*.
 
 El estado de la aplicación contenido en los *metadatos* está disponible para todos los  componentes que conforman el cliente.
-
